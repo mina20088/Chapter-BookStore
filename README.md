@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://laravel.com" target="_blank"><img src="./resources/images/logo-colored.png" width="200" alt="Laravel Logo"></a></p>
+<a href="https://localhost:8000" target="_blank"><img src="./resources/images/logo-colored.png" width="200" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -8,19 +8,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Welcome to my Laravel-powered online bookstore website!
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project was created to provide a user-friendly platform for browsing and purchasing books online. It's built with Laravel, a popular PHP framework known for its elegant syntax and powerful features.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
+- Book Browsing: Explore a wide selection of books, organized by category, author, and more.
+- Search Functionality: Quickly find specific titles or authors using the search bar.
+- Book Details: View detailed information about each book, including descriptions, reviews, and ratings.
+- Shopping Cart: Add books to your cart and manage your selections.
+- Secure Checkout: Complete your purchases with a secure payment gateway.
+- User Accounts: Create an account to track your orders and manage your preferences.
+- Admin Dashboard: (If applicable) Manage books, orders, and users through an intuitive admin panel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## Learning Laravel
 
