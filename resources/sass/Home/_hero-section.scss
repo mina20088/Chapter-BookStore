@@ -1,0 +1,136 @@
+@media (min-width:576px) {
+    .hero-section{
+        background: $gray-100;
+    }
+    .new-release-book-cover{
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: -8rem;
+        border-radius: 10px;
+    }
+    .hero-section-writings{
+        font-family: "New Amsterdam", sans-serif;
+        p{
+            font-family: "Moderustic", sans-serif;
+            font-size: 1em;
+        }
+    }
+    .hero-section-price{
+        & > button {
+            &:nth-child(1) {
+                a {
+                    color: $danger;
+                }
+
+                &:hover {
+                    background-color: $danger;
+
+                    a {
+                        color: $white;
+
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+                    color: $white;
+                }
+
+                &:hover {
+                    background-color: $white;
+
+                    a {
+                        color: $dark;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .hero-section-writings{
+        p{
+            font-size: 1.3em;
+            line-height: 32px;
+        }
+    }
+}
+
+@media (min-width:992px) {
+    .new-release-book-cover{
+        width: 80%;
+        margin-bottom: -10rem;
+    }
+    .hero-section-writings{
+        width: 75%;
+        p{
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width:575.9px) {
+    .hero-section {
+        background: $gray-100;
+        padding: 4rem 3rem;
+    }
+    .new-release-book-cover{
+        border-radius: 10px;
+    }
+    .hero-section-writings {
+        font-family: "New Amsterdam", sans-serif;
+
+        p {
+            font-family: "Moderustic", sans-serif;
+            font-size: 1em;
+        }
+    }
+    .hero-section-price {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+
+        & > button {
+            &:nth-child(1) {
+                a {
+                    color: $danger;
+                }
+
+                &:hover {
+                    background-color: $danger;
+
+                    a {
+                        color: $white;
+
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                a {
+                    color: $white;
+                }
+
+                &:hover {
+                    background-color: $white;
+
+                    a {
+                        color: $dark;
+                    }
+
+                }
+            }
+        }
+    }
+    .new-release-book-cover {
+        margin-bottom: -8rem;
+    }
+}

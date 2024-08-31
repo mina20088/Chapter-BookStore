@@ -1,0 +1,48 @@
+/*fonts*/
+
+$New_Amsterdam_font : "New Amsterdam", sans-serif;
+$Moderustic_font: "Moderustic", sans-serif;
+
+/*colors*/
+$persian-blue: #1E40AFff;
+$onyx: #404040ff;
+$dark-spring-green: #047857ff;
+$carmine: #991B1Bff;
+$jonquil: #FACC15ff;
+$midnight-green: #155E75ff;
+$black: #000000ff;
+$white: #FFFFFFff;
+
+
+
+
+/*variables*/
+$headings-font-family:$New_Amsterdam_font;
+$primary:$persian-blue;
+$secondary:$onyx;
+$success:$dark-spring-green;
+$danger:$carmine;
+$warning:$jonquil;
+$info:$midnight-green;
+/*offcanavas variable's*/
+$offcanvas-horizontal-width:200px;
+$offcanvas-bg-color:$info;
+
+/*spacers*/
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 6,
+    7: $spacer * 4,
+    8: $spacer * 7,
+    9: $spacer * 9,
+    10:$spacer * 12
+
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
