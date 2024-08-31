@@ -8,7 +8,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Welcome to my Laravel-powered online bookstore website!
+## Welcome to Chapter online bookstore website!
 
 This project was created to provide a user-friendly platform for browsing and purchasing books online. It's built with Laravel, a popular PHP framework known for its elegant syntax and powerful features.
 
@@ -22,13 +22,12 @@ This project was created to provide a user-friendly platform for browsing and pu
 - Admin Dashboard: (If applicable) Manage books, orders, and users through an intuitive admin panel.
 
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Technologies Used
+- **[Laravel]: The core framework for building the website.
+- **[MySQL]: Database for storing book information, user data, and orders.
+- **[Blade Templating]: For creating dynamic and reusable views.
+- **[Bootstrap]: (Or similar) For styling and layout.
+- **[Payment Gateway]: (Stripe, PayPal, etc.) For handling secure payments.
 
 ## Laravel Sponsors
 
