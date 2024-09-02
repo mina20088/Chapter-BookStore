@@ -2,7 +2,7 @@
 <section class="hero-section py-sm-7 px-sm-7 px-sm-5 py-md-5 py-lg-6">
     <div class="container ">
         <div class="row">
-            <div class="col-md-6 d-flex justify-content-md-center">
+            <div class="col-md-6 d-flex flex-column justify-content-md-center align-items-lg-end">
                 <div class="hero-section-writings d-flex flex-column justify-content-md-center">
                     <span class="display-4 text-danger">New Release</span>
                     <h1 class="display-1 text-secondary">Silence</h1>

@@ -3,16 +3,11 @@
         margin-left: 3rem;
         margin-right: 3rem;
         border-radius: 3rem;
-        h1{
-            font-size: 3em;
-            text-align: center;
-            color: $warning;
-        }
-        p{
-            font-family: "Moderustic", sans-serif;
-            font-size: 1em;
-        }
+
+
+
     }
+
     .author-section-photo{
         img{
             width: 100%;
@@ -20,6 +15,7 @@
         }
 
     }
+
     .author-details-section {
         width: 100%;
         border-top: 1px solid #404040;
@@ -29,18 +25,33 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        h1{
+            font-size: 3em;
+            text-align: center;
+            color: $warning;
+        }
+        p{
+            font-family: "Moderustic", sans-serif;
+            &:nth-child(1){
+                font-size: 2em;
+                font-weight: bold;
+            }
+        }
 
-        p {
+    }
+
+    .author-word-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p
+        {
             &:nth-child(1) {
                 margin-top: 2rem;
                 font-family: "New Amsterdam", sans-serif;
                 font-size: 2em;
             }
-            &:nth-child(2) {
-                font-size: 1em;
-                font-weight: normal;
-            }
-
         }
     }
 
@@ -55,21 +66,29 @@
     .author-section{
         background-color: white;
     }
+
     .authors-photo{
         width: 323px;
     }
+
     .author-section-writtings{
+
+
+    }
+
+    .author-word-section{
         & > h1 {
             font-family: "Moderustic", sans-serif;
+            font-weight: bold;
         }
         & > p {
             font-family: "Moderustic" ,sans-serif;
             font-size: 1.3em;
-            line-height: 32px;
+            line-height: 24px;
             color: $black;
         }
-
     }
+
     .author-section-photo{
         img{
             width: 328px;
@@ -77,19 +96,17 @@
         }
 
     }
+
 }
 
 @media (min-width:992px) {
+
     .author-section-photo{
         img{
-            width: 100%;
+            width: 80%;
             border-radius: 3rem;
         }
-
     }
-}
-
-@media (min-width: 1200px) {
 
 }
 
@@ -98,7 +115,10 @@
         margin-left: 3rem;
         margin-right: 3rem;
         border-radius: 3rem;
+
+
     }
+
     .author-heading{
         margin-top: 7rem;
         & > .container > .row > .col-sm-12 {
@@ -107,6 +127,30 @@
             }
         }
     }
+
+    .author-word-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & > p
+        {
+            &:nth-child(1) {
+                margin-top: 2rem;
+                font-family:"Moderustic", sans-serif;
+                font-size: 2em;
+            }
+            &:nth-child(2) {
+                font-size: 1em;
+                font-weight: normal;
+            }
+        }
+        & > a {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+
     .author-section-writtings{
         p{
             font-size: 1em;
@@ -119,6 +163,7 @@
             padding: 1rem;
         }
     }
+
     .author-section-photo{
         img{
             width: 100%;
@@ -126,6 +171,7 @@
         }
 
     }
+
     .author-details-section{
         width: 100%;
         border-top: 1px solid $secondary;
@@ -138,12 +184,14 @@
         p{
             &:nth-child(1){
                 margin-top: 2rem;
-                font-family: "New Amsterdam", sans-serif;
+                font-family: "Moderustic", sans-serif;
                 font-size: 2em;
+                font-weight: bold;
             }
 
         }
     }
+
     .author-social-list{
         & > li{
             border: none;
@@ -152,4 +200,5 @@
             font-size: 2.5em;
         }
     }
+
 }

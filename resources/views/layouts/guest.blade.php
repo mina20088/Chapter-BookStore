@@ -11,6 +11,7 @@
 <header>
     <nav class="navbar navbar-expand-lg py-lg-0">
         <div class="Home-navbar-container container-fluid py-lg-3">
+
             <a href=""><img class="logo" src="{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/logo-colored.png") }}" alt="logo"></a>
 
             @include('partials._login-cart-sidebar-section')
@@ -40,10 +41,10 @@
                     </ul>
                     <ul class="Home-side-bar-login navbar-nav d-sm-none d-lg-flex justify-content-lg-end align-items-lg-center">
                         <li class="nav-item text-sm-center d-flex justify-content-sm-center align-items-sm-center">
-                            <a href="" class="btn btn-outline-warning btn-lg">Register</a>
+                            <a href="#" class="btn btn-link"><img src="{{ \Illuminate\Support\Facades\Vite::asset('/resources/images/login.png') }}"></a>
                         </li>
                         <li class="nav-item text-sm-center d-flex justify-content-sm-center align-items-sm-center ms-3">
-                            <a href="" class="btn btn-warning btn-lg">Login</a>
+                            <a href="" class="btn btn-link"><img src="{{ \Illuminate\Support\Facades\Vite::asset('/resources/images/bag.png') }}"></a>
                         </li>
                     </ul>
                 </div>

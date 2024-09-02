@@ -29,20 +29,20 @@
 }
 
 @media (min-width:992px) {
-    .Home-navbar-container{
-        background-color: $primary;
-    }
     .Home-side-bar{
         flex-basis: 90%;
-        a{
-            color: $white;
-            font-family: "New Amsterdam", sans-serif;
-            font-size: 2em;
-            font-weight:normal;
-            &:hover{
+        li{
+            a{
                 color: $warning;
+                font-family: "New Amsterdam", sans-serif;
+                font-size: 2em;
+                font-weight:normal;
+                &:hover{
+                    color: $dark;
+                }
             }
         }
+
     }
     .Home-side-bar-login{
         flex-basis: 10%;

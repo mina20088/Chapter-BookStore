@@ -54,7 +54,7 @@
     .hero-section-writings{
         p{
             font-size: 1.3em;
-            line-height: 32px;
+            line-height: 24px;
         }
     }
 }
@@ -70,9 +70,20 @@
             font-size: 1.5em;
         }
     }
+
 }
 
 @media (min-width: 1200px) {
+    .new-release-book-cover{
+        width: 70%;
+        margin-bottom: -11rem;
+    }
+    .hero-section-writings{
+        p{
+            line-height: 32px;
+            font-size: 1.7em;
+        }
+    }
 
 }
 

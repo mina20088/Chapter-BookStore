@@ -24255,20 +24255,17 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
-  .Home-navbar-container {
-    background-color: #1e40af;
-  }
   .Home-side-bar {
     flex-basis: 90%;
   }
-  .Home-side-bar a {
-    color: white;
+  .Home-side-bar li a {
+    color: #facc15;
     font-family: "New Amsterdam", sans-serif;
     font-size: 2em;
     font-weight: normal;
   }
-  .Home-side-bar a:hover {
-    color: #facc15;
+  .Home-side-bar li a:hover {
+    color: #212529;
   }
   .Home-side-bar-login {
     flex-basis: 10%;
@@ -24360,7 +24357,7 @@ textarea.form-control-lg {
 @media (min-width: 768px) {
   .hero-section-writings p {
     font-size: 1.3em;
-    line-height: 32px;
+    line-height: 24px;
   }
 }
 @media (min-width: 992px) {
@@ -24373,6 +24370,16 @@ textarea.form-control-lg {
   }
   .hero-section-writings p {
     font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .new-release-book-cover {
+    width: 70%;
+    margin-bottom: -11rem;
+  }
+  .hero-section-writings p {
+    line-height: 32px;
+    font-size: 1.7em;
   }
 }
 @media (max-width: 575.9px) {
@@ -24424,15 +24431,6 @@ textarea.form-control-lg {
     margin-right: 3rem;
     border-radius: 3rem;
   }
-  .author-section h1, .author-section .h1 {
-    font-size: 3em;
-    text-align: center;
-    color: #facc15;
-  }
-  .author-section p {
-    font-family: "Moderustic", sans-serif;
-    font-size: 1em;
-  }
   .author-section-photo img {
     width: 100%;
     border-radius: 3rem;
@@ -24447,14 +24445,28 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
   }
+  .author-details-section h1, .author-details-section .h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #facc15;
+  }
+  .author-details-section p {
+    font-family: "Moderustic", sans-serif;
+  }
   .author-details-section p:nth-child(1) {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .author-word-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-word-section p:nth-child(1) {
     margin-top: 2rem;
     font-family: "New Amsterdam", sans-serif;
     font-size: 2em;
-  }
-  .author-details-section p:nth-child(2) {
-    font-size: 1em;
-    font-weight: normal;
   }
   .author-social-list > li > a > i {
     font-size: 2.5em;
@@ -24467,13 +24479,14 @@ textarea.form-control-lg {
   .authors-photo {
     width: 323px;
   }
-  .author-section-writtings > h1, .author-section-writtings > .h1 {
+  .author-word-section > h1, .author-word-section > .h1 {
     font-family: "Moderustic", sans-serif;
+    font-weight: bold;
   }
-  .author-section-writtings > p {
+  .author-word-section > p {
     font-family: "Moderustic", sans-serif;
     font-size: 1.3em;
-    line-height: 32px;
+    line-height: 24px;
     color: black;
   }
   .author-section-photo img {
@@ -24483,7 +24496,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
   .author-section-photo img {
-    width: 100%;
+    width: 80%;
     border-radius: 3rem;
   }
 }
@@ -24498,6 +24511,25 @@ textarea.form-control-lg {
   }
   .author-heading > .container > .row > .col-sm-12 h1, .author-heading > .container > .row > .col-sm-12 .h1 {
     color: #047857;
+  }
+  .author-word-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-word-section > p:nth-child(1) {
+    margin-top: 2rem;
+    font-family: "Moderustic", sans-serif;
+    font-size: 2em;
+  }
+  .author-word-section > p:nth-child(2) {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  .author-word-section > a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .author-section-writtings p {
     font-size: 1em;
@@ -24525,8 +24557,9 @@ textarea.form-control-lg {
   }
   .author-details-section p:nth-child(1) {
     margin-top: 2rem;
-    font-family: "New Amsterdam", sans-serif;
+    font-family: "Moderustic", sans-serif;
     font-size: 2em;
+    font-weight: bold;
   }
   .author-social-list > li {
     border: none;
