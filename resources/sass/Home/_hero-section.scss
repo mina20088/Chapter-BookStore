@@ -13,6 +13,7 @@
         p{
             font-family: "Moderustic", sans-serif;
             font-size: 1em;
+            line-height: 24px;
         }
     }
     .hero-section-price{
@@ -75,7 +76,7 @@
 
 @media (min-width: 1200px) {
     .new-release-book-cover{
-        width: 70%;
+        width: 60%;
         margin-bottom: -11rem;
     }
     .hero-section-writings{

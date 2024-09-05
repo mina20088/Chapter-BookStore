@@ -24318,6 +24318,48 @@ textarea.form-control-lg {
     display: none;
   }
 }
+.slider-container {
+  width: 800px; /* Adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 200px; /* Adjust as needed */
+  margin: 0 10px;
+  text-align: center;
+}
+
+.slide img {
+  width: 200px;
+  height: auto;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 @media (min-width: 576px) {
   .hero-section {
     background: #f8f9fa;
@@ -24334,6 +24376,7 @@ textarea.form-control-lg {
   .hero-section-writings p {
     font-family: "Moderustic", sans-serif;
     font-size: 1em;
+    line-height: 24px;
   }
   .hero-section-price > button:nth-child(1) a {
     color: #991b1b;
@@ -24374,7 +24417,7 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
   .new-release-book-cover {
-    width: 70%;
+    width: 60%;
     margin-bottom: -11rem;
   }
   .hero-section-writings p {
@@ -24445,15 +24488,9 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
   }
-  .author-details-section h1, .author-details-section .h1 {
-    font-size: 3em;
-    text-align: center;
-    color: #facc15;
-  }
-  .author-details-section p {
-    font-family: "Moderustic", sans-serif;
-  }
   .author-details-section p:nth-child(1) {
+    margin-top: 2rem;
+    font-family: "Moderustic", sans-serif;
     font-size: 2em;
     font-weight: bold;
   }
@@ -24463,10 +24500,18 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
   }
-  .author-word-section p:nth-child(1) {
+  .author-word-section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-word-section div > p:nth-child(1) {
     margin-top: 2rem;
-    font-family: "New Amsterdam", sans-serif;
-    font-size: 2em;
+    font-family: "Moderustic", sans-serif;
+    font-size: 1em;
+    line-height: 24px;
+    color: black;
   }
   .author-social-list > li > a > i {
     font-size: 2.5em;
@@ -24499,6 +24544,27 @@ textarea.form-control-lg {
     width: 80%;
     border-radius: 3rem;
   }
+  .author-word-section div > p:nth-child(1) {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .author-section-photo img {
+    width: 70%;
+    border-radius: 3rem;
+  }
+  .author-word-section > div p:nth-child(1) {
+    font-size: 1.7em;
+    line-height: 32px;
+  }
+}
+@media (min-width: 1400px) {
+  .author-section-photo img {
+    width: 60%;
+  }
+  .author-details-section {
+    margin-top: 6rem;
+  }
 }
 @media (max-width: 575.9px) {
   .author-section {
@@ -24518,6 +24584,15 @@ textarea.form-control-lg {
     justify-content: center;
     align-items: center;
   }
+  .author-word-section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .author-word-section > h2, .author-word-section > .h2 {
+    display: none;
+  }
   .author-word-section > p:nth-child(1) {
     margin-top: 2rem;
     font-family: "Moderustic", sans-serif;
@@ -24532,6 +24607,7 @@ textarea.form-control-lg {
     padding-bottom: 1rem;
   }
   .author-section-writtings p {
+    font-family: "Moderustic", sans-serif;
     font-size: 1em;
     color: black;
   }
@@ -24566,5 +24642,33 @@ textarea.form-control-lg {
   }
   .author-social-list > li > a > i {
     font-size: 2.5em;
+  }
+}
+@media (max-width: 575.9px) {
+  .slider-section {
+    margin-top: 4rem;
+    background-color: #f8f9fa;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .slider-section > h1, .slider-section > .h1 {
+    text-align: center;
+    font-family: "Moderustic", sans-serif;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 1.5rem;
+  }
+  .slider-container {
+    width: 450px;
+  }
+  .slide img {
+    max-width: 200px;
+    border-radius: 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(30, 64, 175, 0.5);
+  }
+  .next {
+    right: 20px;
   }
 }

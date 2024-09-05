@@ -1,0 +1,33 @@
+@media (max-width:575.9px)
+{
+    .slider-section{
+        margin-top: 4rem;
+        background-color: $gray-100;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        & > h1 {
+            text-align: center;
+            font-family: "Moderustic", sans-serif;
+            font-weight: bold;
+            color: $primary;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .slider-container{
+        width:450px
+    }
+    .slide img {
+        max-width: 200px;
+        border-radius: 3px;
+    }
+    .prev, .next {
+        &:hover{
+            background-color: rgba(30, 64, 175, 0.50);
+        }
+    }
+    .next {
+        right:20px;
+    }
+
+}
