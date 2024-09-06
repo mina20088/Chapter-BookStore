@@ -18,8 +18,8 @@
         width:450px
     }
     .slide img {
-        max-width: 200px;
-        border-radius: 3px;
+        min-width: 200px;
+        border-radius: 10px;
     }
     .prev, .next {
         &:hover{

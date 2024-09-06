@@ -29,3 +29,6 @@ nextButton.addEventListener('click', () => {
 
 // Initial display
 showSlides();
+
+
+

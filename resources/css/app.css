@@ -24662,8 +24662,8 @@ textarea.form-control-lg {
     width: 450px;
   }
   .slide img {
-    max-width: 200px;
-    border-radius: 3px;
+    min-width: 200px;
+    border-radius: 10px;
   }
   .prev:hover, .next:hover {
     background-color: rgba(30, 64, 175, 0.5);
