@@ -10403,6 +10403,7 @@ readers do not read off random characters that represent icons */
 /*variables*/
 /*offcanavas variable's*/
 /*spacers*/
+/*Cards*/
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
@@ -14960,7 +14961,7 @@ textarea.form-control-lg {
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
   --bs-card-cap-color: ;
-  --bs-card-height: ;
+  --bs-card-height: 53rem;
   --bs-card-color: ;
   --bs-card-bg: var(--bs-body-bg);
   --bs-card-img-overlay-padding: 1rem;
@@ -24642,15 +24643,27 @@ textarea.form-control-lg {
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card {
   width: 18rem;
 }
+.highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
+  height: 100%;
+}
 
 @media (min-width: 576px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 21rem;
+    height: 54rem;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-footer a {
+    width: 8rem;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-footer p {
+    font-size: 0.9em;
+    margin: 0;
   }
 }
 @media (min-width: 1200px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 26rem;
+    height: 53rem;
   }
 }
 @media (max-width: 575.9px) {
@@ -24665,15 +24678,18 @@ textarea.form-control-lg {
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
     height: 747px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide {
     background-color: transparent;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
     width: 100%;
+    height: 56rem;
     border-radius: 10px;
   }
-  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card img {
+  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
     height: 500px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -24687,9 +24703,22 @@ textarea.form-control-lg {
 }
 @media (max-width: 400px) {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
-    height: 635px;
+    height: 57rem;
   }
-  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card img {
-    height: 400px;
+  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
+    height: 52rem;
   }
+  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
+    height: 35rem;
+  }
+}
+.rating .star {
+  color: #facc15;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+  color: gold;
 }
