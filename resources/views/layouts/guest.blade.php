@@ -15,6 +15,7 @@
             <a href=""><img class="logo" src="{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/logo-colored.png") }}" alt="logo"></a>
 
             @include('partials._login-cart-sidebar-section')
+       
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
                 <div class="offcanvas-header d-flex justify-content-center p-lg-0">

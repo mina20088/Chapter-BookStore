@@ -62,11 +62,11 @@
 
 @media (min-width:992px) {
     .new-release-book-cover{
-        width: 80%;
+        width: 100%;
         margin-bottom: -10rem;
     }
     .hero-section-writings{
-        width: 75%;
+        width: 100%;
         p{
             font-size: 1.5em;
         }
@@ -76,10 +76,11 @@
 
 @media (min-width: 1200px) {
     .new-release-book-cover{
-        width: 60%;
+        width: 100%;
         margin-bottom: -11rem;
     }
     .hero-section-writings{
+        width: 100%;
         p{
             line-height: 32px;
             font-size: 1.7em;

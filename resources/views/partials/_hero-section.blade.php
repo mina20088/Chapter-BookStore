@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-6">
                 <div class="new-release-book-cover-wrapper d-flex justify-content-md-center">
-                    <img class="new-release-book-cover img-fluid" src="{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/Black and Grey Dark Forest Aesthetic Book Cover.png") }}" alt="new Relase">
+                    <img class="new-release-book-cover img-fluid" src="{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/Silince.png") }}" alt="new Relase">
                 </div>
             </div>
         </div>

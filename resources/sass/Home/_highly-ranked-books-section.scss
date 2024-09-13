@@ -1,0 +1,122 @@
+
+
+.highly-ranked-books-section{
+    h1{
+        color: $warning;
+    }
+    & > .container > .row > .col-12 {
+        .swiper{
+            width: 100%;
+            height: 700px;
+            .swiper-button-next{
+                right:35px;
+            }
+            .swiper-button-prev, .swiper-button-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                cursor: pointer;
+            }
+            .swiper-button-prev{
+                left:23px
+            }
+            & > .swiper-wrapper > .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                .card{
+                    width: 18rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .highly-ranked-books-section{
+        & > .container > .row > .col-12 {
+            & > .swiper > .swiper-wrapper > .swiper-slide {
+                .card {
+                    width: 21rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .highly-ranked-books-section{
+        & > .container > .row > .col-12 {
+            & > .swiper > .swiper-wrapper > .swiper-slide {
+                .card {
+                    width: 26rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.9px) {
+
+    .highly-ranked-books-section {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 2rem 1rem;
+        background-color:#f8f9fa;
+        & > .container > .row > .col-12 {
+            .swiper {
+                height: 747px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        background-color: transparent;
+                        .card{
+                            width: 100%;
+                            border-radius: 10px;
+                            img{
+                                height: 500px;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+                        }
+                    }
+                }
+                .swiper-button-next{
+                    right:35px;
+                }
+                .swiper-button-prev{
+                    left:35px
+                }
+            }
+
+        }
+    }
+}
+@media (max-width: 400px) {
+    .highly-ranked-books-section {
+        & > .container > .row > .col-12 {
+            .swiper {
+                height: 635px;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .card{
+                            img{
+                                height:400px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

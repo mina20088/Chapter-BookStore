@@ -110,7 +110,7 @@
 @media (min-width:992px) {
     .author-section-photo{
         img{
-            width: 80%;
+            width: 100%;
             border-radius: 3rem;
         }
     }
@@ -126,8 +126,9 @@
 @media (min-width: 1200px) {
     .author-section-photo{
         img{
-            width: 70%;
-            border-radius: 3rem;
+            width: 80%;
+            height: 80%;
+            border-radius: 1rem;
         }
     }
     .author-word-section {
@@ -145,7 +146,7 @@
 @media (min-width:1400px) {
     .author-section-photo{
         img{
-            width: 60%
+            width: 80%
         }
     }
     .author-details-section {

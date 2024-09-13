@@ -1,34 +1,56 @@
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-let slideIndex = 0;
+import Swiper from 'swiper/bundle';
 
-function showSlides() {
-    const slides = document.querySelectorAll('.slide');
-    const slideWidth = slides[0].offsetWidth + 20; // 20 for margins
+import 'swiper/css/bundle';
 
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
+const swiper  = new Swiper(".swiper",{
+    // Optional parameters
+    loop: true,
+    slidesPerView: 5,
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+          slidesPerView:1,
+          spaceBetween:30,
+      },
+      576:{
+          slidesPerView:2,
+          spaceBetween:2,
+      },
+      768:{
+          slidesPerView:3,
+          spaceBetween:3,
+      },
+      992:{
+          slidesPerView:4,
+          spaceBetween:4,
+      },
+      1200:{
+          slidesPerView: 4,
+          spaceBetween: 20,
+      },
+      1400: {
+          slidesPerView: 5,
+          spaceBetween: 5
+      }
 
-    slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-}
+    },
 
-prevButton.addEventListener('click', () => {
-    slideIndex--;
-    showSlides();
-});
 
-nextButton.addEventListener('click', () => {
-    slideIndex++;
-    showSlides();
-});
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+    },
 
-// Initial display
-showSlides();
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+})
 
 
