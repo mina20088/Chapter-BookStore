@@ -45,12 +45,13 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    #[ArrayShape(['email_verified_at' => "string", 'password' => "string"])] protected function casts(): array
+    #[ArrayShape(['email_verified_at' => "string", 'password' => "string",'active' => Enums\ActiveEnum::class])]
+    protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'active' => ActiveEnum::class
+            'active' => Enums\ActiveEnum::class
         ];
     }
 }
