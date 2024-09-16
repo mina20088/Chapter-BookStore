@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use JetBrains\PhpStorm\ArrayShape;
+use App\Enums;
 
 class User extends Authenticatable
 {
@@ -17,9 +19,15 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
-        'password',
+        'gender',
+        'DOB',
+        'active',
+        'address_1',
+        'address_2',
+        'phone_number'
     ];
 
     /**
@@ -37,11 +45,12 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+    #[ArrayShape(['email_verified_at' => "string", 'password' => "string"])] protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'active' => ActiveEnum::class
         ];
     }
 }
