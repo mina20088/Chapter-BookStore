@@ -36,7 +36,7 @@ class BookFactory extends Factory
             'ISBN' => $this->faker->isbn13(),
             'cover_image' => $this->faker->imageUrl(),
             'description' => $this->faker->paragraph(),
-            'excrept' => $this->faker->sentence(10),
+            'excrept' => $this->faker->sentence(3),
             'format' => $this->faker->randomElement(['pdf', 'doc', 'docx']),
             'pages' => $this->faker->numberBetween(1, 100),
             'language' => $this->faker->languageCode(),
