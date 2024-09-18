@@ -25,6 +25,7 @@ class Book extends Model
         'publication_date',
     ];
 
+
     public function genre() :belongsTo
     {
         return $this->belongsTo(Genre::class);
@@ -40,10 +41,8 @@ class Book extends Model
         return $this->belongsToMany(Author::class,'book_author');
     }
 
-
-
     public function users(): belongsToMany
     {
-        return $this->belongsToMany(User::class)->using(Order::class);
+        return $this->belongsToMany(User::class,'orders')->using(Order::class);
     }
 }

@@ -36,7 +36,7 @@
         </div>
         <div class="swiper-slide">
             <div class="card">
-                <img src="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/Forest background aesthetic novel book cover.png') }}" class="card-img-top" alt="...">
+                <img src="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/Forest background aesthetic novel bookSeeder cover.png') }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

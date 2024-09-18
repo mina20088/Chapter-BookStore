@@ -4,8 +4,12 @@ namespace App\Models;
 
 use App\Enums\OrderStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 use JetBrains\PhpStorm\ArrayShape;
+
 
 class Order extends Pivot
 {
@@ -21,8 +25,6 @@ class Order extends Pivot
         'quantity',
         'price',
     ];
-
-
 
 
     #[ArrayShape(['order_date' => 'date', 'order_status' => 'integer'])]
