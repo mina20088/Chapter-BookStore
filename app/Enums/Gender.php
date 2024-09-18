@@ -2,9 +2,9 @@
 
 namespace App\Enums;
 
-enum Gender
+enum Gender :int
 {
-     case Male;
-     case  Female;
-     case  Unknown;
+     case Male = 0;
+     case  Female = 1;
+     case  Unknown = 2;
 }

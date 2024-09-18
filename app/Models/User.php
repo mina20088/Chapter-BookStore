@@ -52,7 +52,7 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    #[ArrayShape(['email_verified_at' => "string", 'password' => "string",'active' => "bool", 'gender' => Enums\Gender::class])]
+    #[ArrayShape(['email_verified_at' => "string", 'password' => "string",'active' => "bool", 'gender' => "integer"])]
     protected function casts(): array
     {
         return [
