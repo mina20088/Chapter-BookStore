@@ -2,8 +2,8 @@
 
 namespace App\Enums;
 
-enum ActiveEnum
+enum ActiveEnum: int
 {
-    case Active;
-    case InActive;
+    case Active = 0;
+    case InActive = 1;
 }
