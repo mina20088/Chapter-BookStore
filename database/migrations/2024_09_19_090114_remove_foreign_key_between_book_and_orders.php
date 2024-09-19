@@ -11,7 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::table('orders', function (Blueprint $table) {
+            $table->dropForeign("FK_BOOKS_ORDERS");
+            //$table->dropColumn('book_id');
+
+        });
     }
 
     /**
@@ -19,6 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('orders', function (Blueprint $table) {
+            //$table->unsignedBigInteger('book_id')->after('order_date');
+            $table->foreign('book_id','FK_BOOKS_ORDERS')->references('id')->on('books')->cascadeOnDelete();
+        });
     }
 };
