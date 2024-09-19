@@ -7,11 +7,13 @@ use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
 use App\Models\Order;
+use App\Models\OrderItems;
 use App\Models\Publisher;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Factories\OrderFactory;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class DatabaseSeeder extends Seeder
@@ -28,13 +30,8 @@ class DatabaseSeeder extends Seeder
          Genre::truncate();
          Publisher::truncate();
          Order::truncate();
+         OrderItems::truncate();
+         DB::table('book_author')->truncate();
 
-/*         User::factory()->hasAttached(Book::factory(2),[
-             'order_status' => OrderStatus::OnHold,
-             'quantity' => 10,
-             'price' => 120
-         ])->create();*/
-
-         User::factory()->hasAttached(Order::factory(2))->hasAttached(Book::factory(2))->create();
     }
 }

@@ -16,6 +16,6 @@ class OrderItems extends Pivot
         'order_id',
         'book_id',
         'quantity',
-         'price',
+        'price',
     ];
 }
