@@ -48,13 +48,6 @@ class User extends Authenticatable
         return Carbon::parse($this->attributes['birthdate'])->age;
     }
 
-    public function books() :BelongsToMany
-    {
-        return $this->belongsToMany(Book::class,'orders')->using(Order::class);
-    }
-
-
-
 
     /**
      * Get the attributes that should be cast.
