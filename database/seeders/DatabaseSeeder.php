@@ -29,10 +29,12 @@ class DatabaseSeeder extends Seeder
          Publisher::truncate();
          Order::truncate();
 
-         User::factory()->hasAttached(Book::factory(2),[
+/*         User::factory()->hasAttached(Book::factory(2),[
              'order_status' => OrderStatus::OnHold,
              'quantity' => 10,
              'price' => 120
-         ])->create();
+         ])->create();*/
+
+         User::factory()->hasAttached(Order::factory(2))->hasAttached(Book::factory(2))->create();
     }
 }
