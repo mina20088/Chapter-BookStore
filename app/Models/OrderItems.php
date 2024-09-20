@@ -5,12 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
-
-class OrderItems extends Pivot
+class OrderItems extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_item';
+    protected $primaryKey = "id";
+
+    protected $table = "order_items";
+
+    public $incrementing = true;
 
     protected $fillable = [
         'order_id',

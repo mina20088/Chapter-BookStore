@@ -12,26 +12,36 @@ use App\Models\Publisher;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Database\Factories\OrderFactory;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use JetBrains\PhpStorm\NoReturn;
 
 class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
      */
+    #[NoReturn]
     public function run(): void
     {
-         Schema::disableForeignKeyConstraints();
-         User::truncate();
-         Author::truncate();
-         Book::truncate();
-         Genre::truncate();
-         Publisher::truncate();
-         Order::truncate();
-         OrderItems::truncate();
-         DB::table('book_author')->truncate();
+
+        DB::listen(function ($query) {
+            echo $query->sql . "\n";
+        });
+
+
+        $this->callOnce([
+            UserSeeder::class,
+            BookSeeder::class,
+        ]);
+
+        $user = User::find(1);
+
+        $book1 = Book::find(1);
+
+
 
     }
 }
