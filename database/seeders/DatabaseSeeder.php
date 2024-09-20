@@ -7,7 +7,6 @@ use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
 use App\Models\Order;
-use App\Models\OrderItems;
 use App\Models\Publisher;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -31,7 +30,7 @@ class DatabaseSeeder extends Seeder
             echo $query->sql . "\n";
         });
 
-
+/*
         $this->callOnce([
             UserSeeder::class,
             BookSeeder::class,
@@ -39,8 +38,12 @@ class DatabaseSeeder extends Seeder
 
         $user = User::find(1);
 
-        $book1 = Book::find(1);
+        $book1 = Book::find(1);*/
 
+
+        User::factory(1)->has(Order::factory(2))->create();
+
+        //Order::factory(2)->create();
 
 
     }

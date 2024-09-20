@@ -26,16 +26,12 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
 
-/*    public function books():BelongsToMany
+    public function books():BelongsToMany
     {
-        return $this->belongsToMany(Book::class)->withPivot('quantity','price');
-    }*/
-
-
-    public function OrderItems(): BelongsToMany
-    {
-        return $this->belongsToMany(OrderItems::class,'order_items');
+        return $this->belongsToMany(Book::class,'order_items')->withPivot('quantity','price');
     }
+
+
 
 
     #[ArrayShape(['order_date' => 'date', 'order_status' => 'integer'])]
