@@ -30,20 +30,20 @@ class DatabaseSeeder extends Seeder
             echo $query->sql . "\n";
         });
 
-/*
-        $this->callOnce([
-            UserSeeder::class,
-            BookSeeder::class,
-        ]);
-
-        $user = User::find(1);
-
-        $book1 = Book::find(1);*/
 
 
-        User::factory(1)->has(Order::factory(2))->create();
 
-        //Order::factory(2)->create();
+        $user = User::factory()->create();
+  /*      $Order = Order::create([
+            'user_id' => $user->id,
+            'order_status' => OrderStatus::Pending,
+
+        ])->books()->attach(Book::factory()->count(5)->create()->pluck('id'),['quantity' => 5,'price' => 100]);*/
+
+        $order = Order::factory()->create()->books()->attach(Book::factory()->count(5)->create()->pluck('id'),['quantity' => 5,'price' => 100]);
+
+
+
 
 
     }
