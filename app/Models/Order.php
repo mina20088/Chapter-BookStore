@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use JetBrains\PhpStorm\ArrayShape;
 
 
@@ -29,6 +30,10 @@ class Order extends Model
     public function books():BelongsToMany
     {
         return $this->belongsToMany(Book::class,'order_items')->withPivot('quantity','price');
+    }
+
+    public  function shipment() :HasOne {
+        return $this->hasOne(Shipment::class);
     }
 
 

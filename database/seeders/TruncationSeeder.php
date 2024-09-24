@@ -7,13 +7,14 @@ use App\Models\Book;
 use App\Models\Genre;
 use App\Models\Order;
 use App\Models\Publisher;
+use App\Models\Shipment;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-class TrncationSeeder extends Seeder
+class TruncationSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -28,6 +29,7 @@ class TrncationSeeder extends Seeder
                 Genre::truncate();
                 Publisher::truncate();
                 Order::truncate();
+                Shipment::truncate();
                 DB::table('order_items')->truncate();
                 DB::table('book_author')->truncate();
     }
