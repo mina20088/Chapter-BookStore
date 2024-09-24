@@ -36,9 +36,6 @@ class Order extends Model
         return $this->hasOne(Shipment::class);
     }
 
-
-
-
     #[ArrayShape(['order_date' => 'date', 'order_status' => 'integer'])]
     protected function casts(): array
     {
