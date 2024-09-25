@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Enums\ActiveEnum;
 use App\Enums\Gender;
+use App\Models\Address;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -32,7 +33,6 @@ class UserFactory extends Factory
             'gender' => fake()->randomElement(Gender::class),
             'DOB' => fake()->date(),
             'phone_number' => fake()->phoneNumber(),
-            'address_1' => fake()->address(),
             'active' => fake()->randomElement(ActiveEnum::class),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
