@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Address;
 use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
@@ -29,6 +30,7 @@ class TruncationSeeder extends Seeder
                 Genre::truncate();
                 Publisher::truncate();
                 Order::truncate();
+                Address::truncate();
                 Shipment::truncate();
                 DB::table('order_items')->truncate();
                 DB::table('book_author')->truncate();

@@ -13,7 +13,7 @@ class Address extends Model
     protected $fillable = [
         "user_id",
         "type",
-        "house-number/building-number",
+        "house_number/building_number",
         "street-name",
         "unit/apartment-number",
         "building-name/complex-name",
