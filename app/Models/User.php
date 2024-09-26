@@ -60,6 +60,11 @@ class User extends Authenticatable
         return $this->belongsToMany(Book::class);
     }
 
+    public function addresses(): HasMany
+    {
+        return $this->hasMany(Address::class);
+    }
+
     /**
      * Get the attributes that should be cast.
      *

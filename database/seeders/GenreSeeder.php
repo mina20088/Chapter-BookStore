@@ -2,19 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Address;
-use App\Models\User;
+use App\Models\Genre;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class GenreSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $user_1 = User::factory(1)->create();
-        $user_1->has(Address::factory(1)->create());
+         Genre::factory(8)->create();
     }
 }

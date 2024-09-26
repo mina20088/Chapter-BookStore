@@ -32,5 +32,6 @@ class TruncationSeeder extends Seeder
                 Shipment::truncate();
                 DB::table('order_items')->truncate();
                 DB::table('book_author')->truncate();
+                Db::table('book_user')->truncate();
     }
 }

@@ -14,11 +14,5 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        $book_1 = Book::factory(1)
-            ->hasAttached(Author::factory()->count(2))
-            ->create();
-        $book_2 = Book::factory(1)
-            ->hasAttached(Author::factory()->count(1))
-            ->create();
     }
 }

@@ -24,7 +24,6 @@ class Author extends Model
         'nationality',
         'website',
         'image',
-
     ];
 
 

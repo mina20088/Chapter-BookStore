@@ -34,47 +34,11 @@ class DatabaseSeeder extends Seeder
             echo $query->sql . "\n";
         });
 
+        $this->call(
+            UserSeeder::class,
+        );
 
 
 
-        $user = User::factory()->create();
-  /*      $Order = Order::create([
-            'user_id' => $user->id,
-            'order_status' => OrderStatus::Pending,
-
-        ])->books()->attach(Book::factory()->count(5)->create()->pluck('id'),['quantity' => 5,'price' => 100]);*/
-
-        //$order = Order::factory()->create()->books()->attach(Book::factory()->count(5)->create()->pluck('id'),['quantity' => 5,'price' => 100]);
-
-        $user = User::create([
-            'first_name' => "mina",
-            'last_name' => "shaker",
-            'email' => "mina@shaker.com",
-            'gender' => Gender::Male,
-            'DOB' => "1986-12-17",
-            'phone_number' => "0100777794",
-            'address_1' => "23 abn matrouh-shoupra-cairo",
-            'active' => ActiveEnum::Active,
-            'password' => "22058149"
-        ]);
-
-        $order = $user->orders()->create([
-            'order_date' => now(),
-            'user_id' => $user->id,
-            'order_status' => OrderStatus::Pending,
-        ]);
-
-        $userOrder = Order::find($order->id);
-
-        $userOrder->books()->attach(Book::factory(2)->create()->pluck('id'),['quantity' => 2, 'price' => 200]);
-
-        $userOrder->shipment()->create([
-            'order_id' => $order->id,
-            'delivery_date' => Carbon::parse($userOrder->created_at)->addDays(5),
-            'estimated_delivery_date' => Carbon::parse($userOrder->created_at)->addDays(5),
-            'status' => OrderStatus::OnHold,
-            'cost' => 50.00
-
-        ]);
     }
 }

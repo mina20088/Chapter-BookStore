@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use phpDocumentor\Reflection\DocBlock\Tags\Method;
+
 
 class Book extends Model
 {
@@ -25,6 +27,7 @@ class Book extends Model
         'language',
         'publication_date',
     ];
+
 
 
     public function genre() :belongsTo
