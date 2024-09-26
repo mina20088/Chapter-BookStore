@@ -12,6 +12,9 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use JetBrains\PhpStorm\ArrayShape;
 
 
+/**
+ * @method static find(int $id)
+ */
 class Order extends Model
 {
     use HasFactory;

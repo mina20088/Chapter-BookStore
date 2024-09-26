@@ -37,10 +37,12 @@ class DatabaseSeeder extends Seeder
         $order = $user->orders()->create([
             'order_status' => OrderStatus::Cancelled
         ]);
-        $order->books()->attach([
+        $UserOrder = Order::find($order->id);
+        $UserOrder->books()->attach([
             $books_id[0] => ['price' => 100, 'quantity' => 1],
             $books_id[1] => ['price' => 940, 'quantity' => 2],
         ]);
+        $user->books()->attach($books_id);
 
     }
 }
