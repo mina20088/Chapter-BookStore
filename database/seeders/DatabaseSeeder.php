@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 
+use App\Enums\OrderStatus;
+use App\Models\Book;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -29,8 +32,14 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $user = User::find(1);
-        $user->orders()->create([
-
+        $books = Book::where("id", 1)->orWhere("id", 2)->get();
+        $books_id = $books->pluck('id');
+        $order = $user->orders()->create([
+            'order_status' => OrderStatus::Cancelled
+        ]);
+        $order->books()->attach([
+            $books_id[0] => ['price' => 100, 'quantity' => 1],
+            $books_id[1] => ['price' => 940, 'quantity' => 2],
         ]);
 
     }

@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use phpDocumentor\Reflection\DocBlock\Tags\Method;
 
 
+/**
+ * @method static where(string $string, int $int)
+ */
 class Book extends Model
 {
     use HasFactory;

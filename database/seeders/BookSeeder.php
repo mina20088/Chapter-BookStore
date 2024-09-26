@@ -21,7 +21,7 @@ class BookSeeder extends Seeder
 
         $Authors = Author::factory(2)->create();
 
-        Book::create([
+        $book_1= Book::create([
             "title" => "Accusantium eaque quae.",
             "genre_id" => 1,
             "publisher_id" => 1,
@@ -36,5 +36,23 @@ class BookSeeder extends Seeder
             "language" => "EN",
             "publication_date" => "1987-03-04"
         ])->authors()->attach($Authors->pluck('id'));
+
+        $author_1 = Author::factory(1)->create();
+
+        $book_2 = $book_2 = Book::create([
+            "title" => "The Mysteries of Time.",
+            "genre_id" => 2,
+            "publisher_id" => 2,
+            "ISBN" => "9781234567890",
+            "cover_image" => "https://via.placeholder.com/640x480.png/ff5733?text=mystery",
+            "description" => "An intriguing journey through the fabric of time, exploring the unknown and the unseen. A tale of adventure and discovery.",
+            "excrept" => "Time waits for no one.",
+            "format" => "epub",
+            "pages" => 320,
+            "language" => "EN",
+            "publication_date" => "2024-09-26"
+        ])->authors()->attach($author_1->pluck('id'));
+
+
     }
 }
