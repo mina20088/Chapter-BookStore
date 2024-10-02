@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\ArrayShape;
 
 
@@ -25,18 +26,13 @@ class Order extends Model
         'order_status',
     ];
 
-    public function user(): BelongsTo
-    {
+    public function user(): BelongsTo{
         return $this->belongsTo(User::class);
     }
 
-    public function books():BelongsToMany
+    public static function truncate(): null
     {
-        return $this->belongsToMany(Book::class,'order_items')->withPivot('quantity','price');
-    }
-
-    public  function shipment() :HasOne {
-        return $this->hasOne(Shipment::class);
+        return DB::table('orders')->truncate();
     }
 
     #[ArrayShape(['order_date' => 'date', 'order_status' => 'integer'])]
