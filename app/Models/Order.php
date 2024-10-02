@@ -30,6 +30,13 @@ class Order extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function books(): BelongsToMany
+    {
+        return $this
+            ->belongsToMany(Book::class,'order_items', 'order_id', 'book_id')
+            ->using(OrderItems::class)
+            ->withPivot('quantity', 'price');
+    }
     public static function truncate(): null
     {
         return DB::table('orders')->truncate();
