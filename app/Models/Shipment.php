@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\DB;
 
 class Shipment extends Model
 {
@@ -18,8 +19,9 @@ class Shipment extends Model
         "cost",
     ];
 
-    public function order():BelongsTo
+    public static function truncate(): null
     {
-        return $this->belongsTo(Order::class);
+        return DB::table('shipments')->truncate();
     }
+
 }
