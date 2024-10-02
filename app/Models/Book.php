@@ -54,4 +54,12 @@ class Book extends Model
     {
         return $this->belongsTo(Publisher::class);
     }
+
+    public function orders() : BelongsToMany
+    {
+        return $this
+            ->belongsToMany(Order::class,'order_items', 'book_id', 'order_id')
+            ->using(OrderItems::class)
+            ->withPivot('quantity', 'price');
+    }
 }
