@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
 class Genre extends Model
 {
@@ -15,8 +16,14 @@ class Genre extends Model
         'description',
     ];
 
+    public static function truncate(): null
+    {
+        return  DB::table('genres')->truncate();
+    }
+
     public function books(): HasMany
     {
         return $this->hasMany(Book::class);
     }
+
 }
