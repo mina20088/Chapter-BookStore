@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\ArrayShape;
 use App\Enums;
 
@@ -45,9 +46,20 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function getAgeAttribute(): int
+    public static function truncate()
     {
-        return Carbon::parse($this->attributes['birthdate'])->age;
+        return DB::table('users')->truncate();
+    }
+
+   //model Relations
+    public function addresses(): HasMany
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    public function books(): BelongsToMany
+    {
+        return $this->belongsToMany(Book::class, 'book_user');
     }
 
     public function orders(): HasMany
@@ -55,15 +67,11 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
-    public function books(): BelongsToMany
+    public function getAgeAttribute(): int
     {
-        return $this->belongsToMany(Book::class);
+        return Carbon::parse($this->attributes['birthdate'])->age;
     }
 
-    public function addresses(): HasMany
-    {
-        return $this->hasMany(Address::class);
-    }
 
     /**
      * Get the attributes that should be cast.
