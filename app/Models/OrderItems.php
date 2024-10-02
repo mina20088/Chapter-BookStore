@@ -10,6 +10,10 @@ class OrderItems extends pivot
 {
     use HasFactory;
 
+    public $incrementing = true;
+
+    protected $table = 'order_items';
+
     protected $fillable = [
         'order_id',
         'book_id',
