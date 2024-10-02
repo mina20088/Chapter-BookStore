@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Facades\DB;
 use phpDocumentor\Reflection\DocBlock\Tags\Method;
 
 
@@ -31,30 +32,26 @@ class Book extends Model
         'publication_date',
     ];
 
-
-
-    public function genre() :belongsTo
+    public static function truncate(): null
     {
+       return  DB::table('books')->truncate();
+    }
+
+    public function genre(): BelongsTo{
         return $this->belongsTo(Genre::class);
-    }
-
-    public function publisher() :belongsTo
-    {
-        return $this->belongsTo(Publisher::class);
-    }
-
-    public function authors():belongsToMany
-    {
-        return $this->belongsToMany(Author::class,'book_author');
-    }
-
-    public function orders() :belongsToMany
-    {
-        return $this->belongsToMany(Order::class,'order_items')->withPivot('quantity','price');
     }
 
     public function users(): BelongsToMany
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class,'book_user');
+    }
+    public function authors(): BelongsToMany
+    {
+        return $this->belongsToMany(Author::class,'book_author');
+    }
+
+    public function publisher(): BelongsTo
+    {
+        return $this->belongsTo(Publisher::class);
     }
 }
