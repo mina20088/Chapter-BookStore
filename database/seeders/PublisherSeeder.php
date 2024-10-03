@@ -13,6 +13,18 @@ class PublisherSeeder extends Seeder
      */
     public function run(): void
     {
-        Publisher::factory(3)->create();
+        Publisher::factory(11)->createMany([
+            ['name' => "Penguin"],
+            ['name' => "HarperCollins"],
+            ['name' => "Simon & Schuster"],
+            ['name' => "Hachette"],
+            ['name' => "Pearson"],
+            ['name' => "Wiley"],
+            ["name" => "McGraw-Hill Education"],
+            ["name" => "Oxford University Press"],
+            ["name" => "Bloomsbury"],
+            ['name' => "Scholastic Corporation"],
+            ['name' => "Macmillan"],
+        ]);
     }
 }
