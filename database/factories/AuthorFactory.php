@@ -21,6 +21,7 @@ class AuthorFactory extends Factory
         return [
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
+            'slug' => fake()->slug(),
             'middle_name' => $this->faker->lastName,
             'email' => $this->faker->unique()->safeEmail(),
             'DOB' => $this->faker->date(),
