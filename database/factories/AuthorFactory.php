@@ -27,7 +27,7 @@ class AuthorFactory extends Factory
             'bio' => $this->faker->text(),
             'nationality' => $this->faker->randomElement(Nationality::class),
             'website' => $this->faker->url(),
-            'image' => $this->faker->imageUrl(3000, 3000, 'person', true, 'Faker', true),
+            'image' => $this->faker->imageUrl(500, 500, 'person', true, 'Faker', true),
         ];
     }
 }
