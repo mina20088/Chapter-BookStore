@@ -11,7 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        //TODO: ['books', 'authors','genre', 'publisher','users']
+
+        Schema::table('books', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('title');
+        });
+        Schema::table('authors', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('last_name');
+        });
+        Schema::table('genres', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('name');
+        });
+        Schema::table('publishers', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('name');
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('slug')->unique()->after('last_name');
+        });
     }
 
     /**
@@ -19,6 +35,20 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('books', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
+        Schema::table('authors', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
+        Schema::table('genres', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
+        Schema::table('publishers', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
     }
 };
