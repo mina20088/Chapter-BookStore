@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Publisher;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class PublisherSeeder extends Seeder
 {
@@ -13,6 +14,8 @@ class PublisherSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
+        Publisher::truncate();
         Publisher::factory(11)->createMany([
             ['name' => "Penguin"],
             ['name' => "HarperCollins"],
