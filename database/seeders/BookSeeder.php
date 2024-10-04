@@ -19,7 +19,7 @@ class BookSeeder extends Seeder
     public function run(): void
     {
         Book::factory(6)->createMany([
-            ['genre_id' => 2 , 'publisher_id' => 3 , ]
+            ['genre_id' => 2 , 'publisher_id' => 3 , 'title' => "Silence" , 'cover_image' => "storage/images/books/silence.jpg" , 'description' => "Silence is a novel by <NAME> that tells the story of a young boy who is raised by his mother's abusive father."]
         ]);
     }
 }
