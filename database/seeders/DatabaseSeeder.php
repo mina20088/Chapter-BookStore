@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Enums\OrderStatus;
 use App\Models\Book;
 use App\Models\Order;
+use App\Models\Publisher;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -24,25 +25,15 @@ class DatabaseSeeder extends Seeder
             echo $query->sql . "\n";
         });
 
-        $this->callOnce([
-            UserSeeder::class
-        ]);
+
+        \Schema::disableForeignKeyConstraints();
+        DB::table('book_author')->truncate();
+
         $this->call([
-           BookSeeder::class
+            AuthorsSeeder::class,
+            GenreSeeder::class,
+            PublisherSeeder::class,
+            BookSeeder::class,
         ]);
-
-        $user = User::find(1);
-        $books = Book::where("id", 1)->orWhere("id", 2)->get();
-        $books_id = $books->pluck('id');
-        $order = $user->orders()->create([
-            'order_status' => OrderStatus::Cancelled
-        ]);
-        $UserOrder = Order::find($order->id);
-        $UserOrder->books()->attach([
-            $books_id[0] => ['price' => 100, 'quantity' => 1],
-            $books_id[1] => ['price' => 940, 'quantity' => 2],
-        ]);
-        $user->books()->attach($books_id);
-
     }
 }
