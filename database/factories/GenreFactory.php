@@ -18,6 +18,7 @@ class GenreFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'slug' => fake()->slug(),
             'description' => $this->faker->text(),
         ];
     }
