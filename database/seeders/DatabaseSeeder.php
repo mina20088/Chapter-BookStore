@@ -2,12 +2,6 @@
 
 namespace Database\Seeders;
 
-
-use App\Enums\OrderStatus;
-use App\Models\Book;
-use App\Models\Order;
-use App\Models\Publisher;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\NoReturn;
