@@ -20,6 +20,7 @@ class PublisherFactory extends Factory
     {
         return [
             "name" => $this->faker->name(),
+            'slug' => fake()->slug(),
             'nationality' => $this->faker->randomElement(Nationality::class),
             'email' => $this->faker->unique()->safeEmail(),
             'phone_number' => $this->faker->phoneNumber(),
