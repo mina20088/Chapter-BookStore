@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\AuthorsEnum;
 use App\Enums\Nationality;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -27,7 +28,7 @@ class AuthorFactory extends Factory
             'bio' => $this->faker->text(),
             'nationality' => $this->faker->randomElement(Nationality::class),
             'website' => $this->faker->url(),
-            'image' => $this->faker->imageUrl(500, 500, 'person', true, 'Faker', true),
+            'image' => $this->faker->randomElement(AuthorsEnum::class)
         ];
     }
 }
