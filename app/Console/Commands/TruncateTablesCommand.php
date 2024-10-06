@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Artisan;
 use Illuminate\Console\Command;
 
 class TruncateTablesCommand extends Command
@@ -27,7 +28,7 @@ class TruncateTablesCommand extends Command
     {
         $this->info("Start Truncation");
 
-        \Artisan::call('db:seed',['--class' => "Database\\Seeders\\TruncationSeeder"  ] );
+        Artisan::call('db:seed',['--class' => "Database\\Seeders\\TruncationSeeder"  ] );
 
         $this->info("Truncation complete");
 
