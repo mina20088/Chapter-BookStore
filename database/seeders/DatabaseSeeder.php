@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\NoReturn;
+use Schema;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,7 +21,7 @@ class DatabaseSeeder extends Seeder
         });
 
 
-        \Schema::disableForeignKeyConstraints();
+        Schema::disableForeignKeyConstraints();
         DB::table('book_author')->truncate();
 
         $this->call([
