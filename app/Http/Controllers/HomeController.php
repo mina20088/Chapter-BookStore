@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Services\BookService;
 
 class HomeController extends Controller
 {
-    public function __invoke()
+    protected BookService $bookService;
+    public function __construct(BookService $bookService)
     {
-        return view('welcome');
+        $this->bookService = $bookService;
+    }
+    public function index()
+    {
+        return view('Home.index',[
+            'books' => $this->bookService->getAllBooks(),
+            'new' => $this->bookService->newReleaseBook(),
+            'rank' => $this->bookService->limitBook()
+        ]);
     }
 }
