@@ -16,7 +16,7 @@
             <div class="col-md-6">
                 <div class="new-release-book-cover-wrapper d-flex justify-content-md-center">
                     <!--{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/Silince.png") }}-->
-                    <img class="new-release-book-cover img-fluid" src="{{ asset('storage/images/Silince.png') }}" alt="new Relase">
+                    <img class="new-release-book-cover img-fluid" src="{{ asset('storage/images/books-cover/Silince.png') }}" alt="new Relase">
                 </div>
             </div>
         </div>
