@@ -6,6 +6,7 @@ use App\Enums\AuthorsEnum;
 use App\Models\Author;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Schema;
 use Str;
 
 class AuthorsSeeder extends Seeder
@@ -15,7 +16,7 @@ class AuthorsSeeder extends Seeder
      */
     public function run(): void
     {
-        \Schema::disableForeignKeyConstraints();
+        Schema::disableForeignKeyConstraints();
         Author::truncate();
         Author::factory()->createMany([
            [
