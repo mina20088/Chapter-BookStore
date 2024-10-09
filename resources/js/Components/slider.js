@@ -13,29 +13,27 @@ const swiper  = new Swiper(".swiper",{
           spaceBetween:30,
       },
       576:{
-          slidesPerView:2,
-          spaceBetween:2,
+          slidesPerView:1,
+          spaceBetween:1,
       },
       768:{
+          slidesPerView:2,
+          spaceBetween:4,
+      },
+      992:{
           slidesPerView:3,
           spaceBetween:3,
       },
-      992:{
-          slidesPerView:4,
-          spaceBetween:4,
-      },
       1200:{
-          slidesPerView: 4,
-          spaceBetween: 20,
+          slidesPerView: 3,
+          spaceBetween: 4,
       },
       1400: {
-          slidesPerView: 5,
+          slidesPerView:4,
           spaceBetween: 5
       }
 
     },
-
-
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
