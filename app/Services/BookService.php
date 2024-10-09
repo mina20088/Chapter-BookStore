@@ -14,6 +14,21 @@ class BookService
             ->get();
     }
 
+    public function create(array $book,...$authors_ids):Book
+    {
+        $created_book =  Book::create($book);
+
+        foreach($authors_ids as $author_id)
+        {
+            $created_book
+                ->authors()
+                ->attach($author_id);
+        }
+
+        return $created_book;
+    }
+
+
     public function newReleaseBook() : Book
     {
         return Book::with('genre','authors','publisher')
