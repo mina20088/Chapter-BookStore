@@ -1,19 +1,22 @@
+<style>
+
+</style>
 <div class="swiper .books">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
         <!-- Slides -->
         @foreach($ranked as $rank)
-
             <div class="swiper-slide">
                 <div class="card">
-                    <img src="{{ $rank->cover_image }}" class="card-img-top" alt="...">
+                    <img src="{{ $rank->cover_image }}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $rank->title }}</h5>
+                        <h2 class="card-title">{{ $rank->title }}</h2>
                         <p class="card-text">{{ $rank->excrept }}</p>
                         <a href="#" class="btn btn-primary">buy now </a>
                     </div>
                 </div>
             </div>
+
         @endforeach
 
     </div>
