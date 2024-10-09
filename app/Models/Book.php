@@ -2,17 +2,21 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use phpDocumentor\Reflection\DocBlock\Tags\Method;
 
 
 /**
  * @method static where(string $string, int $int)
+ * @method static create(array $book)
  */
 class Book extends Model
 {
@@ -32,6 +36,16 @@ class Book extends Model
         'language',
         'publication_date',
     ];
+
+    protected static function booted(): void
+    {
+        static::saving(function ($book)
+        {
+            if($book->slug == null){
+                $book->slug = Str::slug($book->title);
+            }
+        });
+    }
 
     public static function truncate(): null
     {
@@ -63,5 +77,18 @@ class Book extends Model
             ->using(OrderItems::class)
             ->withPivot('quantity', 'price');
     }
+
+    public function inventorys(): HasMany
+    {
+        return $this->hasMany(Inventory::class);
+    }
+
+    protected function slug():Attribute
+    {
+        return Attribute::make(
+            set: fn($value) => Str::slug($value),
+        );
+    }
+
 
 }
