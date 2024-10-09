@@ -2,21 +2,48 @@
 
 namespace App\Services;
 
+use App\Enums\BookConditions;
 use App\Models\Book;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 
+/**
+ *
+ */
 class BookService
 {
+    /**
+     * Get a collection of books with all the relation associated o it
+     * @return Collection
+     */
     public function getAllBooks(): Collection
     {
         return Book::with('genre','authors','publisher')
             ->get();
     }
 
-    public function create(array $book,...$authors_ids):Book
+
+    /**
+     * Create a new book and add it to the inventory
+     * @param array $book
+     * @param int $quantity
+     * @param float $price
+     * @param BookConditions $condition
+     * @param int|null $discount
+     * @param ...$authors_ids
+     * @return Book
+     */
+    public function create(array $book, int $quantity, float $price, BookConditions $condition = BookConditions::New, int $discount = null, ...$authors_ids):Book
     {
         $created_book =  Book::create($book);
+
+        $inventory = $created_book->inventorys()->create([
+            'book_id' => $created_book->id,
+            'condition' => $condition->value,
+            'discount_id' => $discount,
+            'quantity' => $quantity,
+            'price' => $price,
+        ]);
 
         foreach($authors_ids as $author_id)
         {
@@ -29,6 +56,11 @@ class BookService
     }
 
 
+    /**
+     * Retrieves the most recent book release with its related genre, authors, and publisher information.
+     *
+     * @return Book The latest released book with associated relations.
+     */
     public function newReleaseBook() : Book
     {
         return Book::with('genre','authors','publisher')
@@ -36,6 +68,10 @@ class BookService
             ->first();
     }
 
+    /**
+     * Retrieve only 6 books
+     * @return Collection
+     */
     public function limitBook() : Collection
     {
         return Book::with('genre','authors','publisher')
