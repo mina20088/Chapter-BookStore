@@ -24651,6 +24651,12 @@ textarea.form-control-lg {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 39rem;
     height: 100%;
+    position: relative;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card span {
+    position: absolute;
+    top: -2%;
+    right: 0%;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
     height: 80%;
@@ -24667,6 +24673,10 @@ textarea.form-control-lg {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 30rem;
     height: 53rem;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card span {
+    top: -2%;
+    right: 0%;
   }
 }
 @media (max-width: 575.9px) {
@@ -24725,3 +24735,5 @@ textarea.form-control-lg {
 .rating .star:hover ~ .star {
   color: gold;
 }
+
+/*# sourceMappingURL=app.css.map */

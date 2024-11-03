@@ -22,6 +22,9 @@ class BookSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         Book::truncate();
+
+        //TODO:create an inventory for each book created
+
         $books = Book::factory(6)->createMany([
             [
                 'genre_id' => 8,

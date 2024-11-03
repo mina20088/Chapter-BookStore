@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
+use App\Models\Inventory;
 use App\Models\Order;
 use App\Models\Publisher;
 use App\Models\Shipment;
@@ -32,8 +33,10 @@ class TruncationSeeder extends Seeder
                 Order::truncate();
                 Address::truncate();
                 Shipment::truncate();
+                Inventory::truncate();
                 DB::table('order_items')->truncate();
                 DB::table('book_author')->truncate();
                 Db::table('book_user')->truncate();
+
     }
 }

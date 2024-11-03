@@ -11,7 +11,6 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //TODO: ['books', 'authors','genre', 'publisher','users']
 
         Schema::table('books', function (Blueprint $table) {
             $table->string('slug')->unique()->after('title');
