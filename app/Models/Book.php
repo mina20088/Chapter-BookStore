@@ -62,7 +62,7 @@ class Book extends Model
     }
     public function authors(): BelongsToMany
     {
-        return $this->belongsToMany(Author::class,'book_author');
+        return $this->belongsToMany(Author::class,'book_author')->withTimestamps();
     }
 
     public function publisher(): BelongsTo

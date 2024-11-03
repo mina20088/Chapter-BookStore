@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Author;
 use App\Models\Book;
 use App\Models\Genre;
+use App\Models\Inventory;
 use App\Models\Publisher;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -89,5 +90,7 @@ class BookSeeder extends Seeder
         $books->where("id", 4)->first()->authors()->attach(3);
         $books->where("id", 5)->first()->authors()->attach(1);
         $books->where("id", 6)->first()->authors()->attach(5);
+
+
     }
 }
