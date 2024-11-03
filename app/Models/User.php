@@ -7,14 +7,17 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\ArrayShape;
 use App\Enums;
 
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -43,17 +46,31 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public static function truncate()
+    {
+        return DB::table('users')->truncate();
+    }
+
+   //model Relations
+    public function addresses(): HasMany
+    {
+        return $this->hasMany(Address::class);
+    }
+
+    public function books(): BelongsToMany
+    {
+        return $this->belongsToMany(Book::class, 'book_user');
+    }
+
+    public function orders(): HasMany
+    {
+        return $this->hasMany(Order::class);
+    }
+
     public function getAgeAttribute(): int
     {
         return Carbon::parse($this->attributes['birthdate'])->age;
     }
-
-    public function books() :BelongsToMany
-    {
-        return $this->belongsToMany(Book::class,'orders')->using(Order::class);
-    }
-
-
 
 
     /**

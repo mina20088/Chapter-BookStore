@@ -4,12 +4,14 @@ namespace Database\Factories;
 
 use App\Enums\ActiveEnum;
 use App\Enums\Gender;
+use App\Models\Address;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends Factory<User>
  */
 class UserFactory extends Factory
 {
@@ -28,11 +30,11 @@ class UserFactory extends Factory
         return [
             'first_name' => fake()->name(),
             'last_name' => fake()->name(),
+            'slug' => fake()->slug(),
             'email' => fake()->unique()->safeEmail(),
             'gender' => fake()->randomElement(Gender::class),
             'DOB' => fake()->date(),
             'phone_number' => fake()->phoneNumber(),
-            'address_1' => fake()->address(),
             'active' => fake()->randomElement(ActiveEnum::class),
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),

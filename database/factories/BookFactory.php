@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Book>
+ * @extends Factory<Book>
  */
 class BookFactory extends Factory
 {
@@ -33,6 +34,7 @@ class BookFactory extends Factory
             'genre_id' => GenreFactory::new(),
             'publisher_id' => PublisherFactory::new(),
             'title' => $this->faker->sentence(3),
+            'slug' => fake()->slug(),
             'ISBN' => $this->faker->isbn13(),
             'cover_image' => $this->faker->imageUrl(),
             'description' => $this->faker->paragraph(),

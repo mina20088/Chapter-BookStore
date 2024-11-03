@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="display-3 text-center">Highly Rated Reads</h1>
-                <x-slider/>
+                <x-slider :$ranked/>
             </div>
         </div>
     </div>

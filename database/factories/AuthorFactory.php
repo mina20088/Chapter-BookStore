@@ -2,11 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Enums\AuthorsEnum;
 use App\Enums\Nationality;
+use App\Models\Author;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Author>
+ * @extends Factory<Author>
  */
 class AuthorFactory extends Factory
 {
@@ -20,6 +22,7 @@ class AuthorFactory extends Factory
         return [
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
+            'slug' => fake()->slug(),
             'middle_name' => $this->faker->lastName,
             'email' => $this->faker->unique()->safeEmail(),
             'DOB' => $this->faker->date(),
@@ -27,7 +30,7 @@ class AuthorFactory extends Factory
             'bio' => $this->faker->text(),
             'nationality' => $this->faker->randomElement(Nationality::class),
             'website' => $this->faker->url(),
-            'image' => $this->faker->imageUrl(),
+            'image' => $this->faker->randomElement(AuthorsEnum::class)
         ];
     }
 }
