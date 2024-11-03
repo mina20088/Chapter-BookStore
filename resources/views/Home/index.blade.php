@@ -8,5 +8,6 @@
     <!--Author Section-->
     @include('partials._author-section')
     <!--Highly-Ranked-Section-->
-    @include('partials.highly-ranked-books-section',['ranked' => $rank])
+    {{--@include('partials.highly-ranked-books-section',['ranked' => $rank])--}}
+    <livewire:home.highly-rated-read-section/>
 @endsection
