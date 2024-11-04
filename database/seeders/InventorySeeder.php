@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Enums\BookConditions;
 use App\Models\Book;
 use App\Models\Inventory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -18,7 +19,7 @@ class InventorySeeder extends Seeder
 
         foreach ($books as $book)
         {
-            Inventory::create(
+            Inventory::factory()->create(
                 [
                     'book_id' => $book->id,
                 ]
