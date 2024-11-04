@@ -15,6 +15,9 @@
                                     <span class="badge text-bg-primary z-1 d-inline w-25">Primary</span>
                                     <div class="card-body">
                                         <h2 class="card-title">{{ $rank->title }}</h2>
+                                        <div class="">
+                                            <a href="">{{ $rank->genre->name }}</a>
+                                        </div>
                                         <p class="card-text">{{ $rank->excrept }}</p>
                                         <a href="#" class="btn btn-primary">buy now </a>
                                     </div>
@@ -34,4 +37,5 @@
             </div>
         </div>
     </div>
+</section>
 

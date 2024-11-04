@@ -4,7 +4,7 @@
 
 @section('content')
     <!--Hero Section-->
-    @include('partials._hero-section',['new' => $new])
+    @include('partials._hero-section',['book' => $book])
     <!--Author Section-->
     @include('partials._author-section')
     <!--Highly-Ranked-Section-->
