@@ -6,7 +6,7 @@
     & > .container > .row > .col-12 {
         .swiper{
             width: 100%;
-            height: 700px;
+            height: auto;
             .swiper-button-next{
                 right:35px;
             }
@@ -80,7 +80,8 @@
             & > .swiper > .swiper-wrapper > .swiper-slide {
                 .card {
                     width: 30rem;
-                    height: 53rem;
+                    height: 58rem;
+                    max-height: 100rem;
                     span{
                         top: -2%;
                         right: 0%;
