@@ -24716,6 +24716,11 @@ textarea.form-control-lg {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev {
     left: 35px;
   }
+  #badge {
+    position: absolute;
+    width: 25%;
+    bottom: 99%;
+  }
 }
 @media (max-width: 400px) {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
@@ -24723,6 +24728,11 @@ textarea.form-control-lg {
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
     height: 35rem;
+  }
+  #badge {
+    position: absolute;
+    bottom: 99%;
+    width: 30%;
   }
 }
 .rating .star {
