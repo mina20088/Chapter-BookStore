@@ -24615,9 +24615,6 @@ textarea.form-control-lg {
   height: auto;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-next {
-  right: 35px;
-}
-.highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev, .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -24626,8 +24623,17 @@ textarea.form-control-lg {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
+  right: 35px;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
   left: 23px;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide {
@@ -24637,11 +24643,12 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card {
   width: 18rem;
+  min-height: auto;
+  max-height: auto;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
   height: 100%;
@@ -24650,6 +24657,8 @@ textarea.form-control-lg {
 @media (min-width: 576px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 39rem;
+    min-height: auto;
+    max-height: auto;
     height: 100%;
     position: relative;
   }
@@ -24659,8 +24668,9 @@ textarea.form-control-lg {
     right: 0%;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
-    min-height: 65rem;
-    max-height: 100rem;
+    width: auto;
+    min-height: 60rem;
+    max-height: 60rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-footer a {
     width: 8rem;
@@ -24670,11 +24680,23 @@ textarea.form-control-lg {
     margin: 0;
   }
 }
+@media (min-width: 992px) {
+  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
+    width: auto;
+    min-height: 42rem;
+    max-height: 60rem;
+  }
+}
 @media (min-width: 1200px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 30rem;
     min-height: 58rem;
     max-height: 100rem;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
+    width: auto;
+    min-height: 48rem;
+    max-height: 60rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card span {
     top: -2%;
@@ -24686,15 +24708,13 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     padding: 2rem 1rem;
     background-color: #f8f9fa;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
     height: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 2rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide {
     background-color: transparent;
@@ -24734,14 +24754,4 @@ textarea.form-control-lg {
     bottom: 99%;
     width: 30%;
   }
-}
-.rating .star {
-  color: #facc15;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.rating .star:hover,
-.rating .star:hover ~ .star {
-  color: gold;
 }
