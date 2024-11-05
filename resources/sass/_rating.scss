@@ -1,0 +1,10 @@
+.rating-stars {
+    position: absolute;
+    right: 1rem;
+    color: orange;
+    margin-left: 1rem;
+}
+.rating-stars span:hover,
+.rating-stars span:hover ~ span {
+    color: lightgray; /* Change color on hover */
+}
