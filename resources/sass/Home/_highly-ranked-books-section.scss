@@ -163,13 +163,3 @@
     }
 }
 
-.rating .star {
-    color: $warning;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.rating .star:hover,
-.rating .star:hover ~ .star {
-    color: gold;
-}
