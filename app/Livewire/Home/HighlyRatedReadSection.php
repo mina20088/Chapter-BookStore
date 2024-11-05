@@ -20,6 +20,6 @@ class HighlyRatedReadSection extends Component
     {
         $books = $this->bookService
             ->limitBook(6, 'genre');
-        return view('home.highly-rated-read-section',['ranked' => $this->bookService->limitBook(6)]);
+        return view('home.highly-rated-read-section',['ranked' => $books]);
     }
 }
