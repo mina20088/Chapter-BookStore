@@ -24659,7 +24659,8 @@ textarea.form-control-lg {
     right: 0%;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
-    height: 80%;
+    min-height: 65rem;
+    max-height: 100rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-footer a {
     width: 8rem;
@@ -24672,7 +24673,7 @@ textarea.form-control-lg {
 @media (min-width: 1200px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 30rem;
-    height: 58rem;
+    min-height: 58rem;
     max-height: 100rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card span {
@@ -24691,7 +24692,7 @@ textarea.form-control-lg {
     background-color: #f8f9fa;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
-    height: 747px;
+    height: auto;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -24700,11 +24701,12 @@ textarea.form-control-lg {
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
     width: 100%;
-    height: 56rem;
+    min-height: 50rem;
+    max-height: 50rem;
     border-radius: 10px;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
-    height: 500px;
+    min-height: 1rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -24717,10 +24719,7 @@ textarea.form-control-lg {
 }
 @media (max-width: 400px) {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
-    height: 57rem;
-  }
-  .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
-    height: 52rem;
+    height: auto;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
     height: 35rem;
