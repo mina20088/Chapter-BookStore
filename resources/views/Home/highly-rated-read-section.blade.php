@@ -16,7 +16,7 @@
                                         <h2 class="card-title">{{ $rank->title }}</h2>
                                         <div class="d-flex justify-content-between">
                                             <a href="">{{ $rank->genre->name }}</a>
-                                            <livewire:book-rating/>
+                                            <livewire:rating.rating/>
                                         </div>
                                         <p class="card-text">{{ $rank->excrept }}</p>
                                         <a href="#" class="btn btn-primary">buy now </a>

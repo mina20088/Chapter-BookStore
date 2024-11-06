@@ -4,7 +4,7 @@
     color: orange;
     margin-left: 1rem;
 }
-.rating-stars span:hover,
-.rating-stars span:hover ~ span {
+.rating-stars a:hover,
+.rating-stars a:hover ~ a {
     color: lightgray; /* Change color on hover */
 }
