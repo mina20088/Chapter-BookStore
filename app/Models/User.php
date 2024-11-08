@@ -67,10 +67,18 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
+    public function reviewers(): BelongsToMany
+    {
+        return $this->belongsToMany(Book::class, 'reviews')
+            ->withPivot('user_id','book_id','title','ratings')
+            ->withTimestamps();
+    }
+
     public function getAgeAttribute(): int
     {
         return Carbon::parse($this->attributes['birthdate'])->age;
     }
+
 
 
     /**

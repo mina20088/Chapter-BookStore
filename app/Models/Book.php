@@ -83,12 +83,22 @@ class Book extends Model
         return $this->hasMany(Inventory::class);
     }
 
+    public function reviewed(): BelongsToMany
+    {
+        return $this
+            ->belongsToMany(User::class,'reviews')
+            ->withPivot('user_id','book_id','title','ratings')
+            ->withTimestamps();
+    }
+
+
     protected function slug():Attribute
     {
         return Attribute::make(
             set: fn($value) => Str::slug($value),
         );
     }
+
 
 
 }
