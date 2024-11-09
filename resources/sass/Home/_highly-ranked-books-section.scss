@@ -54,7 +54,6 @@ $swiper-btn-color: white;
 
                 .card {
                     @include card-dimensions(18rem);
-
                     .card-img-top {
                         height: 100%;
                     }
@@ -65,12 +64,13 @@ $swiper-btn-color: white;
 }
 
 // Media queries
+
 @media (min-width: 576px) {
     .highly-ranked-books-section {
         & > .container > .row > .col-12 {
             & > .swiper > .swiper-wrapper > .swiper-slide {
                 .card {
-                    @include card-dimensions(39rem);
+                    @include card-dimensions(90%,39rem,100rem);
                     height: 100%;
                     position: relative;
 
@@ -81,7 +81,7 @@ $swiper-btn-color: white;
                     }
 
                     .card-img-top {
-                        @include card-dimensions(auto, 60rem, 60rem);
+                        @include card-dimensions(auto, 39rem, 42rem);
                     }
 
                     .card-footer {
@@ -99,38 +99,34 @@ $swiper-btn-color: white;
     }
 }
 
-@media (min-width: 992px) {
-     .highly-ranked-books-section {
-         & > .container > .row > .col-12 {
-             .swiper{
-                 .swiper-wrapper{
-                     .swiper-slide{
-                         .card{
-                             .card-img-top{
-                                 @include card-dimensions(auto, 42rem,60rem)
-                             }
-                         }
-                     }
-                 }
-             }
-         }
-     }
+@media (min-width: 768px)
+{
+    .highly-ranked-books-section{
+        & > .container > .row > .col-12 {
+            & > .swiper > .swiper-wrapper > .swiper-slide {
+                .card{
+                    @include card-dimensions(100%,51rem,100rem);
+                    .card-img-top {
+                        @include card-dimensions(auto, 31rem, 36rem);
+                    }
+                }
+            }
+        }
+    }
 }
-
 
 @media (min-width: 1200px) {
     .highly-ranked-books-section {
         & > .container > .row > .col-12 {
             & > .swiper > .swiper-wrapper > .swiper-slide {
                 .card {
-                    @include card-dimensions(30rem, 58rem, 100rem);
-                    .card-img-top{
-                        @include card-dimensions(auto, 48rem, 60rem)
-                    }
-
+                    @include card-dimensions(30rem, 55rem, 100rem);
                     span {
                         top: -2%;
                         right: 0%;
+                    }
+                    .card-img-top {
+                        @include card-dimensions(auto, 40rem, 40rem);
                     }
                 }
             }
@@ -157,11 +153,11 @@ $swiper-btn-color: white;
                         background-color: transparent;
 
                         .card {
-                            @include card-dimensions(100%, 50rem, 50rem);
+                            @include card-dimensions(100%, 70rem, 100rem);
                             border-radius: 10px;
 
                             .card-img-top {
-                                min-height: 1rem;
+                                @include card-dimensions(100%, 55rem, 50rem);
                                 border-top-left-radius: 10px;
                                 border-top-right-radius: 10px;
                             }
@@ -196,8 +192,9 @@ $swiper-btn-color: white;
                 .swiper-wrapper {
                     .swiper-slide {
                         .card {
+                            @include card-dimensions(100%, 37rem, 50rem);
                             .card-img-top {
-                                height: 35rem;
+                               @include card-dimensions(100%,37rem,50rem)
                             }
                         }
                     }
@@ -212,3 +209,4 @@ $swiper-btn-color: white;
         width: 30%;
     }
 }
+

@@ -24612,12 +24612,9 @@ textarea.form-control-lg {
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper {
   width: 100%;
-  height: 700px;
+  height: auto;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-next {
-  right: 35px;
-}
-.highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev, .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -24626,8 +24623,17 @@ textarea.form-control-lg {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
+  right: 35px;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
   left: 23px;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide {
@@ -24637,11 +24643,12 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card {
   width: 18rem;
+  min-height: auto;
+  max-height: auto;
 }
 .highly-ranked-books-section > .container > .row > .col-12 .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
   height: 100%;
@@ -24649,7 +24656,9 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
-    width: 39rem;
+    width: 90%;
+    min-height: 39rem;
+    max-height: 100rem;
     height: 100%;
     position: relative;
   }
@@ -24659,7 +24668,9 @@ textarea.form-control-lg {
     right: 0%;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
-    height: 80%;
+    width: auto;
+    min-height: 39rem;
+    max-height: 42rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-footer a {
     width: 8rem;
@@ -24669,14 +24680,32 @@ textarea.form-control-lg {
     margin: 0;
   }
 }
+@media (min-width: 768px) {
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
+    width: 100%;
+    min-height: 51rem;
+    max-height: 100rem;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
+    width: auto;
+    min-height: 31rem;
+    max-height: 36rem;
+  }
+}
 @media (min-width: 1200px) {
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card {
     width: 30rem;
-    height: 53rem;
+    min-height: 55rem;
+    max-height: 100rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card span {
     top: -2%;
     right: 0%;
+  }
+  .highly-ranked-books-section > .container > .row > .col-12 > .swiper > .swiper-wrapper > .swiper-slide .card .card-img-top {
+    width: auto;
+    min-height: 40rem;
+    max-height: 40rem;
   }
 }
 @media (max-width: 575.9px) {
@@ -24684,26 +24713,27 @@ textarea.form-control-lg {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
     padding: 2rem 1rem;
     background-color: #f8f9fa;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
-    height: 747px;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    height: auto;
+    padding: 0 2rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide {
     background-color: transparent;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
     width: 100%;
-    height: 56rem;
+    min-height: 70rem;
+    max-height: 100rem;
     border-radius: 10px;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
-    height: 500px;
+    width: 100%;
+    min-height: 55rem;
+    max-height: 50rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -24713,29 +24743,32 @@ textarea.form-control-lg {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-button-prev {
     left: 35px;
   }
+  #badge {
+    position: absolute;
+    width: 25%;
+    bottom: 99%;
+  }
 }
 @media (max-width: 400px) {
   .highly-ranked-books-section > .container > .row > .col-12 .swiper {
-    height: 57rem;
+    height: auto;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card {
-    height: 52rem;
+    width: 100%;
+    min-height: 37rem;
+    max-height: 50rem;
   }
   .highly-ranked-books-section > .container > .row > .col-12 .swiper .swiper-wrapper .swiper-slide .card .card-img-top {
-    height: 35rem;
+    width: 100%;
+    min-height: 37rem;
+    max-height: 50rem;
+  }
+  #badge {
+    position: absolute;
+    bottom: 99%;
+    width: 30%;
   }
 }
-.rating .star {
-  color: #facc15;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.rating .star:hover,
-.rating .star:hover ~ .star {
-  color: gold;
-}
-
 .rating-stars {
   display: flex;
   flex-direction: row;
