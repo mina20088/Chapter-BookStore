@@ -24736,4 +24736,15 @@ textarea.form-control-lg {
   color: gold;
 }
 
-/*# sourceMappingURL=app.css.map */
+.rating-stars {
+  display: flex;
+  flex-direction: row;
+  color: orange;
+}
+.rating-stars a {
+  cursor: pointer;
+  font-size: 2rem;
+}
+.rating-stars a:hover ~ a {
+  color: lightgray;
+}
