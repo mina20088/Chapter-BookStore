@@ -67,7 +67,7 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
-    public function reviewers(): BelongsToMany
+    public function review(): BelongsToMany
     {
         return $this->belongsToMany(Book::class, 'reviews')
             ->withPivot('user_id','book_id','title','ratings')

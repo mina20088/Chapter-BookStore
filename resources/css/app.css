@@ -24756,8 +24756,8 @@ textarea.form-control-lg {
   }
 }
 .rating-stars {
-  position: absolute;
-  right: 1rem;
+  display: flex;
+  flex-direction: row;
   color: orange;
   margin-left: 1rem;
 }

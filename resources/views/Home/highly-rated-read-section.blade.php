@@ -7,18 +7,18 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        @foreach($ranked as $rank)
+                        @foreach($books as $book)
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{{ $rank->cover_image }}" class="card-img-top img-fluid" alt="...">
+                                    <img src="{{ $book->cover_image }}" class="card-img-top img-fluid" alt="...">
                                     <span id="badge" class="badge text-bg-primary z-1 d-inline">Primary</span>
                                     <div class="card-body">
-                                        <h2 class="card-title">{{ $rank->title }}</h2>
+                                        <h2 class="card-title">{{ $book->title }}</h2>
                                         <div class="d-flex justify-content-between">
-                                            <a href="">{{ $rank->genre->name }}</a>
-                                            <livewire:rating.rating/>
+                                            <a href="">{{ $book->genre->name }}</a>
+                                            <livewire:rating.rating :reviewers="$book->reviews"/>
                                         </div>
-                                        <p class="card-text">{{ $rank->excrept }}</p>
+                                        <p class="card-text">{{ $book->excrept }}</p>
                                         <a href="#" class="btn btn-primary">buy now </a>
                                     </div>
                                 </div>

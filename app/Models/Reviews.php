@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class Reviews extends Pivot
+use Illuminate\Support\Facades\DB;
+
+class Reviews extends Model
 {
     use HasFactory;
 
-    protected $table = 'reviews';
 
     protected $fillable = [
         'user_id',
@@ -18,6 +19,11 @@ class Reviews extends Pivot
         'title',
         'ratings',
     ];
+
+    public static function truncate(): null
+    {
+        return  DB::table('reviews')->truncate();
+    }
 
     public function book(): BelongsTo
     {

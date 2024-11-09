@@ -1,19 +1,11 @@
-<div class="">
-    <div class="rating-stars">
-        @for($i = 1; $i < $maxRating; $i++)
-            <a class="btn btn-link" wire:click="setRating({{ $i }})" class="text-decoration-none">
-                @if($i <= $rating)
-                    <i class="fa-solid fa-star"></i>
-                @elseif($i - 0.5 <= $rating)
-                    <i class="fa-regular fa-star"></i>
-                @else
-                    <i class="fa-regular fa-star"></i>
-                @endif
-            </a>
-
-        @endfor
-    </div>
-{{--    <div class="current-rating">
-        <strong>Rating: {{ $rating }}</strong>
-    </div>--}}
+<div class="rating-stars">
+    @for($i = 0; $i<$maxRating; $i++)
+        <a wire:click="setRating({{ $i }})" style="cursor: pointer; color:orange ">
+            @if($i < $rating)
+                &#9733;
+            @else
+                &#9734;
+            @endif
+        </a>
+    @endfor
 </div>

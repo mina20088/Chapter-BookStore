@@ -83,7 +83,7 @@ class Book extends Model
         return $this->hasMany(Inventory::class);
     }
 
-    public function reviewed(): BelongsToMany
+    public function reviews(): BelongsToMany
     {
         return $this
             ->belongsToMany(User::class,'reviews')

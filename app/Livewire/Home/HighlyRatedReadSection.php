@@ -19,7 +19,7 @@ class HighlyRatedReadSection extends Component
     public function render(): Application|Factory|\Illuminate\Contracts\View\View|View
     {
         $books = $this->bookService
-            ->limitBook(6, 'genre');
-        return view('home.highly-rated-read-section',['ranked' => $books]);
+            ->limitBook(6, 'genre','reviews');
+        return view('home.highly-rated-read-section',['books' => $books]);
     }
 }
