@@ -16,7 +16,7 @@
                                         <h2 class="card-title">{{ $book->title }}</h2>
                                         <div class="d-flex justify-content-between">
                                             <a href="">{{ $book->genre->name }}</a>
-                                            <livewire:rating.rating :reviewers="$book->reviews"/>
+                                            <livewire:rating.rating :book="$book"/>
                                         </div>
                                         <p class="card-text">{{ $book->excrept }}</p>
                                         <a href="#" class="btn btn-primary">buy now </a>
