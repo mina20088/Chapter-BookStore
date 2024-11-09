@@ -12,13 +12,9 @@ use Livewire\Component;
 
 class Rating extends Component
 {
-
-   /* public float $rating = 0;*/
     public float $maxRating = 5;
     public Collection $reviewers;
-
     protected BookService $bookService;
-
 
     public function mount(BookService $bookService, Collection $reviewers): void
     {

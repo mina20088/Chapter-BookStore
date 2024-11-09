@@ -3,8 +3,10 @@
     flex-direction: row;
     color: orange;
     margin-left: 1rem;
+    a{
+        &:hover{
+            color: white;
+        }
+    }
 }
-.rating-stars a:hover,
-.rating-stars a:hover ~ a {
-    color: lightgray; /* Change color on hover */
-}
+

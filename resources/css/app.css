@@ -24761,8 +24761,6 @@ textarea.form-control-lg {
   color: orange;
   margin-left: 1rem;
 }
-
-.rating-stars a:hover,
-.rating-stars a:hover ~ a {
-  color: lightgray; /* Change color on hover */
+.rating-stars a:hover {
+  color: white;
 }
