@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: row;
     color: orange;
-    margin-left: 1rem;
+    //margin-left: 1rem;
     a{
-        &:hover{
-            color: white;
+        cursor: pointer;
+        font-size: 2rem;
+        &:hover ~ a{
+            color: lightgray;
         }
     }
 }

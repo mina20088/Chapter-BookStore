@@ -1,12 +1,10 @@
 <div class="rating-stars">
-    @for($i = 0; $i<$maxRating; $i++)
-        <a wire:click="setRating({{ $i }})" style="cursor: pointer; color:orange ">
-            @if($i < $rating)
-                <i class="fa-solid fa-star"></i>
-                <!--&#9733;-->
+    @for($i = 1;  $i<= $maxRating; $i++)
+        <a wire:click="setRating({{ $i }})">
+            @if($i <= $rating)
+                &#9733;
             @else
-                <!--&#9734;-->
-                <i class="fa-regular fa-star"></i>
+                &#9734;
             @endif
         </a>
     @endfor

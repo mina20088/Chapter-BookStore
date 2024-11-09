@@ -2,29 +2,32 @@
 
 namespace App\Livewire\Rating;
 
+use App\Models\Book;
 use App\Services\BookService;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Application;
-use Illuminate\Support\Number;
 use Illuminate\View\View;
+use JetBrains\PhpStorm\NoReturn;
 use Livewire\Component;
 
 class Rating extends Component
 {
     public float $maxRating = 5;
-    public Collection $reviewers;
-    protected BookService $bookService;
 
-    public function mount(BookService $bookService, Collection $reviewers): void
+    public Book $book;
+
+    public function setRating(float $rating): void
     {
-        $this->reviewers = $reviewers;
 
-        $this->bookService = $bookService;
+    }
 
+    public function mount(Book $book): void
+    {
+        $this->book = $book;
     }
     public function render(): Application|Factory|\Illuminate\Contracts\View\View|View
     {
-        return view('rating.rating',['rating' => $this->bookService->ratingPerBook($this->reviewers)->avg()??0.0]);
+        return view('rating.rating',['rating' => $this->book->reviews()->avg('ratings')]);
     }
 }
