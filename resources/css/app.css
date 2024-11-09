@@ -24735,3 +24735,16 @@ textarea.form-control-lg {
 .rating .star:hover ~ .star {
   color: gold;
 }
+
+.rating-stars {
+  display: flex;
+  flex-direction: row;
+  color: orange;
+}
+.rating-stars a {
+  cursor: pointer;
+  font-size: 2rem;
+}
+.rating-stars a:hover ~ a {
+  color: lightgray;
+}
