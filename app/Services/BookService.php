@@ -4,21 +4,18 @@ namespace App\Services;
 
 use App\Enums\BookConditions;
 use App\Models\Book;
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
+
 
 /**
  *
  */
 class BookService
 {
-    /**
-     * Get a collection of books with all the relation associated o it
-     * @return Collection
-     */
-    public function getAllBooks(): Collection
+
+    public function getAllBooks(...$relations): \Illuminate\Database\Eloquent\Collection
     {
-        return Book::with('genre','authors','publisher')
+        return Book::with($relations)
             ->get();
     }
 
@@ -61,9 +58,9 @@ class BookService
      *
      * @return Book The latest released book with associated relations.
      */
-    public function newReleaseBook() : Book
+    public function newReleaseBook(...$relations) : Book
     {
-        return Book::with('genre','authors','publisher')
+        return Book::with($relations)
             ->latest('created_at')
             ->first();
     }
@@ -72,10 +69,20 @@ class BookService
      * Retrieve only 6 books
      * @return Collection
      */
-    public function limitBook() : Collection
+    public function limitBook(int $limit = 6,...$relations) : Collection
     {
-        return Book::with('genre','authors','publisher')
-            ->limit(6)
+        return Book::with($relations)
+            ->limit($limit)
             ->get();
+    }
+
+    public function ratingPerBook(\Illuminate\Support\Collection $reviewers): \Illuminate\Support\Collection
+    {
+        $ratings = collect();
+
+        foreach($reviewers as $review){
+            $ratings->add($review->pivot->ratings);
+        }
+        return $ratings;
     }
 }

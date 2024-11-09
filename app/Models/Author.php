@@ -29,7 +29,7 @@ class Author extends Model
 
     public function books(): belongsToMany
     {
-        return $this->belongsToMany(Book::class, 'book_author');
+        return $this->belongsToMany(Book::class, 'book_author')->withTimestamps();
     }
 
     public static function truncate(): null

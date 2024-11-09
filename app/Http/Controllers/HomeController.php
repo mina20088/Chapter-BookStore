@@ -13,10 +13,10 @@ class HomeController extends Controller
     }
     public function index()
     {
+        $book = $this->bookService->newReleaseBook('inventorys');
         return view('Home.index',[
-            'books' => $this->bookService->getAllBooks(),
-            'new' => $this->bookService->newReleaseBook(),
-            'rank' => $this->bookService->limitBook()
+            'book' => $book,
+            'price' => $book->inventorys()->first()->price
         ]);
     }
 }

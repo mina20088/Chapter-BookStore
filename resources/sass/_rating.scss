@@ -1,0 +1,14 @@
+.rating-stars {
+    display: flex;
+    flex-direction: row;
+    color: orange;
+    //margin-left: 1rem;
+    a{
+        cursor: pointer;
+        font-size: 2rem;
+        &:hover ~ a{
+            color: lightgray;
+        }
+    }
+}
+

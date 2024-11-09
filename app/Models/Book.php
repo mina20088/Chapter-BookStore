@@ -62,7 +62,7 @@ class Book extends Model
     }
     public function authors(): BelongsToMany
     {
-        return $this->belongsToMany(Author::class,'book_author');
+        return $this->belongsToMany(Author::class,'book_author')->withTimestamps();
     }
 
     public function publisher(): BelongsTo
@@ -83,12 +83,22 @@ class Book extends Model
         return $this->hasMany(Inventory::class);
     }
 
+    public function reviews(): BelongsToMany
+    {
+        return $this
+            ->belongsToMany(User::class,'reviews')
+            ->withPivot('user_id','book_id','title','ratings')
+            ->withTimestamps();
+    }
+
+
     protected function slug():Attribute
     {
         return Attribute::make(
             set: fn($value) => Str::slug($value),
         );
     }
+
 
 
 }

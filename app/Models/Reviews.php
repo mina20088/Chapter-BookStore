@@ -6,25 +6,32 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- * @method static create(array $array)
- */
-class Inventory extends Model
+use Illuminate\Support\Facades\DB;
+
+class Reviews extends Model
 {
     use HasFactory;
 
-    protected $table = 'inventory';
 
     protected $fillable = [
+        'user_id',
         'book_id',
-        'condition',
-        'discount_id',
-        'quantity',
-        'price',
+        'title',
+        'ratings',
     ];
+
+    public static function truncate(): null
+    {
+        return  DB::table('reviews')->truncate();
+    }
 
     public function book(): BelongsTo
     {
         return $this->belongsTo(Book::class);
     }
+
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
+
 }

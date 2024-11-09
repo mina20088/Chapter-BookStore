@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Inventory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use JetBrains\PhpStorm\NoReturn;
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
             GenreSeeder::class,
             PublisherSeeder::class,
             BookSeeder::class,
+            InventorySeeder::class
         ]);
     }
 }
