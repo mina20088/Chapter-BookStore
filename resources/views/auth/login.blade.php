@@ -41,6 +41,4 @@
         <div class="col-6">
             <img class="img-fluid" src="{{ Vite::asset("resources/images/Login_form.png") }}" alt="login_form_illustration">
         </div>
-
-
 </x-auth-layout>
