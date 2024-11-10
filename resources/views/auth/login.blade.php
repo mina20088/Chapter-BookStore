@@ -3,9 +3,9 @@
         Login
     </x-slot>
         <div class="col-6">
-            <h1>Ready to start your</h1>
+            <h1>Welcome Back! Ready to continue your</h1>
             <h1>reading journey</h1>
-            <p>Signup to our website now and start reading</p>
+            <p>Signing to our website now and start reading</p>
             <from action="/login" method="Post">
                 @csrf
                 <div class="form-floating mb-3">
