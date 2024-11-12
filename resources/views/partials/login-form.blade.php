@@ -21,13 +21,13 @@
     </div>
     <div class="d-flex justify-content-between">
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="rememberme">
-            <label class="form-check-label" for="email">
+            <input class="form-check-input" type="checkbox" id="rememberme" name="remember">
+            <label class="form-check-label" for="remember">
                 remember me
             </label>
         </div>
         <div>
-            <a href="">Forget Password</a>
+            <a href="{{ route('password.request') }}">Forget Password</a>
         </div>
     </div>
     <div class="d-grid">

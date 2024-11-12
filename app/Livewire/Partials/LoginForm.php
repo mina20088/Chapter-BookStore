@@ -19,7 +19,7 @@ class LoginForm extends Component
     public function rules(): array
     {
         return [
-            'email' => 'required|email',
+            'email' => 'required|string|email|exists:users,email',
             'password' => 'required',
         ];
     }
