@@ -5,7 +5,7 @@
 /public/storage
 /storage/*.key
 storage/clockwork/*.json
-storage/clockwork/*.File
+storage/clockwork/index
 /vendor
 .env
 .env.backup
