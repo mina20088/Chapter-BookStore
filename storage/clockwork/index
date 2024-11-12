@@ -1612,3 +1612,7 @@
 1731427468-8718-1609751094,1731427468.418,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,684.9160194397,request
 1731427469-3502-1721208897,1731427469.145,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,399.83892440796,request
 1731427643-1145-2116743212,1731427642.5665,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,880.60998916626,request
+1731427711-1760-425153435,1731427710.8129,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,708.34302902222,request
+1731427712-0213-1254676203,1731427711.5534,POST,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@store",302,1178.6420345306,request
+1731427713-5346-373044986,1731427713.0629,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,868.8850402832,request
+1731427718-0586-803472395,1731427717.7072,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,771.33989334106,request
