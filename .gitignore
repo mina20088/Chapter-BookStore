@@ -4,6 +4,8 @@
 /public/hot
 /public/storage
 /storage/*.key
+storage/clockwork/*.json
+storage/clockwork/*.File
 /vendor
 .env
 .env.backup
@@ -19,3 +21,4 @@ yarn-error.log
 /.idea
 /.vscode
 qodana.yaml
+

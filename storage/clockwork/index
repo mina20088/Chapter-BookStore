@@ -499,3 +499,12 @@
 1731430147-8960-1330939742,1731430147.5605,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,612.55192756653,request
 1731430148-5382-1914779160,1731430148.189,GET,/forgot-password,"App\Http\Controllers\Auth\PasswordResetLinkController@create",200,561.01107597351,request
 1731430149-1609-1770880233,1731430148.7656,GET,/,"App\Http\Controllers\HomeController@index",200,855.75079917908,request
+1731430311-9049-980924067,1731430311.4254,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,706.58111572266,request
+1731430316-2244-411626853,1731430315.9703,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,705.65509796143,request
+1731430317-4913-2047383330,1731430317.1341,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,794.88801956177,request
+1731430318-4211-2144663875,1731430318.0126,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,680.74488639832,request
+1731430321-7990-1510065073,1731430321.3566,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,790.0390625,request
+1731430322-6140-858340095,1731430322.2041,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,756.38103485107,request
+1731430323-6714-1205493504,1731430323.3367,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,662.18590736389,request
+1731430324-4977-1428700211,1731430324.065,POST,/livewire/update,"Livewire\Mechanisms\HandleRequests\HandleRequests@handleUpdate",200,717.64993667603,request
+1731430329-1311-1755243470,1731430328.7719,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,679.46600914001,request
