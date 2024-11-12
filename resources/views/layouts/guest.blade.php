@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite('resources/css/app.css')
+{{--
+    @vite(['resources/css/app.css', 'resources/js/app.js'],)
+--}}
 </head>
 <body class="h-100">
 <header>
@@ -15,7 +18,7 @@
             <a href=""><img class="logo" src="{{ \Illuminate\Support\Facades\Vite::asset("/resources/images/logo-colored.png") }}" alt="logo"></a>
 
             @include('partials._login-cart-sidebar-section')
-       
+
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar">
                 <div class="offcanvas-header d-flex justify-content-center p-lg-0">
@@ -42,7 +45,7 @@
                     </ul>
                     <ul class="Home-side-bar-login navbar-nav d-sm-none d-lg-flex justify-content-lg-end align-items-lg-center">
                         <li class="nav-item text-sm-center d-flex justify-content-sm-center align-items-sm-center">
-                            <a href="#" class="btn btn-link"><img src="{{ \Illuminate\Support\Facades\Vite::asset('/resources/images/login.png') }}"></a>
+                            <a href="{{ route('login') }}" class="btn btn-link"><img src="{{ \Illuminate\Support\Facades\Vite::asset('/resources/images/login.png') }}"></a>
                         </li>
                         <li class="nav-item text-sm-center d-flex justify-content-sm-center align-items-sm-center ms-3">
                             <a href="" class="btn btn-link"><img src="{{ \Illuminate\Support\Facades\Vite::asset('/resources/images/bag.png') }}"></a>
@@ -60,4 +63,5 @@
     @yield('footer')
 </footer>
 </body>
+ @vite(['resources/js/app.js'],'async')
 </html>

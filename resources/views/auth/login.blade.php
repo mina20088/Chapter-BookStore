@@ -1,47 +1,45 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<x-auth-layout>
+    <x-slot name="title">
+        Login
+    </x-slot>
+        <div class="col-6">
+            <h1>Welcome Back! Ready to continue your</h1>
+            <h1>reading journey</h1>
+            <p>Signing to our website now and start reading</p>
+            <livewire:partials.login-form/>
+{{--            <from action="/login" method="Post">
+                @csrf
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control border-top-0 border-end-0 border-start-0" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control border-top-0 border-end-0 border-start-0" id="floatingInput" placeholder="password">
+                    <label for="floatingInput">password</label>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            remember me
+                        </label>
+                    </div>
+                    <div>
+                        <a href="">Forget Password</a>
+                    </div>
+                </div>
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-dark mt-sm-5">
+                        Login
+                    </button>
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <p>If you don`t have an account <a href="">Register</a></p>
+                </div>
+            </from>--}}
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <div class="col-6">
+            <img class="img-fluid" src="{{ Vite::asset("resources/images/Login_form.png") }}" alt="login_form_illustration">
         </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</x-auth-layout>

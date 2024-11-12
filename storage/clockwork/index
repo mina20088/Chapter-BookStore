@@ -491,11 +491,3 @@
 1731194872-8913-1442474968,1731194872.3561,GET,/livewire/livewire.js?id=38dc8241,"Livewire\Mechanisms\FrontendAssets\FrontendAssets@returnJavaScriptAsFile",200,730.77893257141,request
 1731195016-9540-620353530,1731195016.5608,GET,/,"App\Http\Controllers\HomeController@index",200,792.49906539917,request
 1731195018-2201-2034732001,1731195017.6702,GET,/livewire/livewire.js?id=38dc8241,"Livewire\Mechanisms\FrontendAssets\FrontendAssets@returnJavaScriptAsFile",200,752.87008285522,request
-1731430142-6579-2016806415,1731430141.9329,GET,/forgot-password,"App\Http\Controllers\Auth\PasswordResetLinkController@create",200,1453.5648822784,request
-1731430144-0156-352771708,1731430143.411,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,1299.164056778,request
-1731430145-4827-1868982455,1731430144.7758,GET,/forgot-password,"App\Http\Controllers\Auth\PasswordResetLinkController@create",200,1086.3862037659,request
-1731430146-4938-1625996245,1731430145.8857,GET,/forgot-password,"App\Http\Controllers\Auth\PasswordResetLinkController@create",200,1037.9390716553,request
-1731430147-2683-799209586,1731430146.9469,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,602.1089553833,request
-1731430147-8960-1330939742,1731430147.5605,GET,/login,"App\Http\Controllers\Auth\AuthenticatedSessionController@create",200,612.55192756653,request
-1731430148-5382-1914779160,1731430148.189,GET,/forgot-password,"App\Http\Controllers\Auth\PasswordResetLinkController@create",200,561.01107597351,request
-1731430149-1609-1770880233,1731430148.7656,GET,/,"App\Http\Controllers\HomeController@index",200,855.75079917908,request

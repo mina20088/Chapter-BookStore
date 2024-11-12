@@ -27,7 +27,7 @@
                 </header>
             @endisset
             <!-- Page Content -->
-                <img src="{{  }}">
+
             <main>
                 {{ $slot }}
             </main>
