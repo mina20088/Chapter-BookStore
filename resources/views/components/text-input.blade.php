@@ -1,3 +1,10 @@
-@props(['disabled' => false])
+@props([
+    'type' => 'text',
+    'name' => null,
+    'id' => null,
+    'placeholder' => 'name@example.com'
+])
 
-<input {{ $disabled ? 'disabled' : '' }} {!! $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}>
+<input
+    {{$attributes->class(['form-control'])->merge(['type' => $type, 'name' => $name, 'id' => $id  , 'placeholder' => $placeholder])}}
+/>
