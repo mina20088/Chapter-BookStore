@@ -6,8 +6,7 @@
     <title>{{ $title ?? "laravel" }}</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
 </head>
-<body>
-
+<body class="body">
 <div class="logo-section mt-5">
     <div class="container-fluid">
         <div class="row">
@@ -22,7 +21,7 @@
 </div>
 <div class="content-section">
     <div class="container">
-        <div class="row justify-content-center align-items-center" style="height: 87vh">
+        <div class="row">
             {{ $slot }}
         </div>
     </div>
