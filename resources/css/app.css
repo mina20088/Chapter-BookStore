@@ -24816,3 +24816,12 @@ textarea.form-control-lg {
     margin-left: 2rem;
   }
 }
+.forget-password-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}

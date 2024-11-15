@@ -13,7 +13,8 @@
             <div class="col-12">
                 <div class="d-flex flex-row justify-content-between align-items-center">
                     <img src="{{ Vite::asset('resources/images/logo-colored.png') }}" class="img-fluid" width="100">
-                    <a class="btn btn-primary h-25" href="{{ route('home.index') }}">Back</a>
+                    {{ $back }}
+                    {{--<a class="btn btn-primary h-25" href="{{ route($link) }}">Back</a>--}}
                 </div>
             </div>
         </div>

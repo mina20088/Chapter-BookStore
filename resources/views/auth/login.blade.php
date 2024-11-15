@@ -2,6 +2,9 @@
     <x-slot name="title">
         Login
     </x-slot>
+    <x-slot name="back">
+        <a class="btn btn-primary h-25" href="{{ route('home.index') }}">Back</a>
+    </x-slot>
     <div class="login-content-section d-flex align-items-center justify-content-center flex-sm-column flex-md-column flex-lg-row gap-lg-4">
         <div class="form-section col-sm-12 mt-sm-3 order-sm-1 order-lg-1 text-sm-center col-lg-6">
             <h1>Welcome Back! Ready to continue your</h1>

@@ -6,5 +6,5 @@
 ])
 
 <input
-    {{$attributes->class(['form-control'])->merge(['type' => $type, 'name' => $name, 'id' => $id  , 'placeholder' => $placeholder])}}
+    {{$attributes->class(['form-control','border-top-0' ,'border-end-0', 'border-start-0'])->merge(['type' => $type, 'name' => $name, 'id' => $id  , 'placeholder' => $placeholder])}}
 />
